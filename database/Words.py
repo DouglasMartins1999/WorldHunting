@@ -36,4 +36,42 @@ countries.append({
             ["Rousseau", "Jean-Jacques ________, importante filósofo"]
         ]
     }
-})
+},
+{
+    "name": "China",
+    "background": "",
+    "categories": {
+        "easy": [
+            ["Grande Muralha", "A China possui a maior construção do mundo, a _______ ________"],
+            ["Ideografia", "Utiliza a ___________ para representar palavras e conceitos abstratos"],
+            ["Poluição", "Segundo país com mais _________ no mundo"],
+            ["Pequim","______, a enorme capital da China"],
+            ["Suina", "A carne _______ é a mais consumida entre Chineses"],
+            ["Ásia", "A China é o maior país da _____ Oriental"],
+            ["Exercito", "O maior número de soldados do _______ encontra-se na China"]
+        ],
+        "medium": [
+            ["Economia","Possui a maior ________ do mundo"],
+            ["Comunista","O País é governado pelo partido ________"],
+            ["Xi Jinping", "__ ______ é como se chama o presidente deste País"],
+            ["Wang", "O nome mais popular na China é _____"],
+            ["Taiwan", "_____ é a Reública da China"],
+            ["Terremoto", "O ______ mais mortal da história aconteceu em 1556 e matou 830 mil pessoas"],
+            ["Oceano","Quase um terço da poluição do ar de San Francisco, vem da China pelo ______"],
+            ["Eletricidade", "A China gera cerca de '70%' da sua ______ em usinas de carvão"],
+            ["Censura", "A China tem uma das políticas de ______ mais rígidas do mundo"],
+            ["Morcego", "O _____ é um símbolo da sorte no país"],
+        ],
+        "hard": [
+            ["Pandas", "Todos os ______ do mundo são emprestados da China"],
+            ["Mukden", "Em 1931, os japoneses invadiram o território chinês, evento conhecido como Incidente ______"],
+            ["Guerra Civil", "A ____ _____ entre comunistas e nacionalistas foi parcialmente interrompida em 1930"],
+            ["Nacionalistas", "A China era ocupada por diferentes nações, como Inglaterra e França, o que motivou movimentos ________"],
+            ["BRICS", "o país é membro do grupo _____ de economias emergentes importantes"],
+            ["Reforma Econômica", "Com a ____ ______ chinesa, milhões de trabalhadores rurais do país se mudaram para as grandes cidades"],
+            ["Carcerária", "O país também tem a segunda maior população carcerária do planeta (atrás apenas dos Estados Unidos)"],
+            ["Filho único", "Preocupada com seu crescimento populacional, tentou implementar uma política de planejamento familiar, chamada: política do ____ _____"]
+        ]
+    }
+}
+)
