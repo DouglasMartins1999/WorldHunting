@@ -69,9 +69,10 @@ countries.append({
             ["Nacionalistas", "A China era ocupada por diferentes nações, como Inglaterra e França, o que motivou movimentos ________"],
             ["BRICS", "o país é membro do grupo _____ de economias emergentes importantes"],
             ["Reforma Econômica", "Com a ____ ______ chinesa, milhões de trabalhadores rurais do país se mudaram para as grandes cidades"],
-            ["Carcerária", "O país também tem a segunda maior população carcerária do planeta (atrás apenas dos Estados Unidos)"],
+            ["Carcerária", "O país também tem a segunda maior população ______ do planeta (atrás apenas dos Estados Unidos)"],
             ["Filho único", "Preocupada com seu crescimento populacional, tentou implementar uma política de planejamento familiar, chamada: política do ____ _____"]
         ]
     }
-}
+},
+
 )
