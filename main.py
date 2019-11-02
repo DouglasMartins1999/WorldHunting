@@ -1,6 +1,7 @@
 import pygame, sys
-from components.Images import icons
+from components.Images import icons, buttons
 from settings.environment import default
+from services.Events import events
 
 from interfaces.Initial import initial
 
@@ -13,6 +14,9 @@ main_screen = pygame.display.set_mode(default.resolution)
 while 1:
     for event in pygame.event.get():
         if event.type == pygame.QUIT: sys.exit()
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            mouse = pygame.mouse.get_pos()
+            events.callListeners(mouse)
 
-    main_screen.blit(initial.base_screen, default.initial_pos)
+    main_screen.blit(initial.render(), default.initial_pos)
     pygame.display.flip()
