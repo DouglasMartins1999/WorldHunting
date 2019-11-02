@@ -84,7 +84,7 @@ class Crossword:
             for iM, lM in enumerate(mainword.word):
                 for iW, lW in enumerate(word):
                     # Possivel união
-                    if lM.letter == lW.letter and not lM.isFilled and not lW.isFilled and mainword.isVertical == currentDirection:
+                    if lM.letter == lW.letter and not lM.isFilled and not lW.isFilled:
                         direction = not mainword.isVertical
                         posX = 0
                         posY = 0
