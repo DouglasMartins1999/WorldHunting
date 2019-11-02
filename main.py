@@ -21,5 +21,5 @@ while 1:
             events.callListeners(mouse)
 
     main_screen.blit(initial.render(), default.initial_pos)
-    main_screen.blit(text(texta, "asap/bold.ttf", 32, "#FFFFFF"), (200, 300))
+    main_screen.blit(text(texta, "asap/regular.ttf", 16, "#000000", (400, 400), 5), (200, 200))
     pygame.display.flip()
