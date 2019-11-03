@@ -2,7 +2,6 @@ countries = []
 
 countries.append({
     "name": "França",
-    "background": "",
     "categories": {
         "easy": [
             ["Paris", "Capital francesa"],
@@ -36,12 +35,10 @@ countries.append({
             ["Rousseau", "Jean-Jacques ________, importante filósofo"]
         ]
     }
-},
-)
+})
 
 countries.append({
     "name": "China",
-    "background": "",
     "categories": {
         "easy": [
             ["Grande Muralha", "A China possui a maior construção do mundo, a _______ ________"],
@@ -114,6 +111,7 @@ countries.append({
         ]
     } 
 })
+
 countries.append({
     "name": "Austrália",
     "background":"",

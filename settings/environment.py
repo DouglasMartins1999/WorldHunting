@@ -1,8 +1,18 @@
 class Default:
     def __init__(self):
-        self.resX = 1024
-        self.resY = 576
+        self.resolution = (1024, 576)
+        self.initial_pos = (0, 0)
         self.words_by_level = 3
-        self.image_root = "assets/images/" 
+        self.image_root = "assets/images/"
+        self.font_root = "assets/fonts/"
 
 default = Default()
+
+level_names = [
+    "Default",
+    "Iniciante",
+    "Normal",
+    "Avançado",
+    "Profissional",
+    "Master"
+]
