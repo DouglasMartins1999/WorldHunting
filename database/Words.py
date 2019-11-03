@@ -125,26 +125,26 @@ countries.append({
         ], 
         "medium": [
             ["Selvagem", "A África é conhecida como lugar da vida ______"],
-            ["diversidade", "Um dos países com maior _________ populacional e geográfica"],
+            ["Diversidade", "Um dos países com maior _________ populacional e geográfica"],
             ["Holandeses", "A África do Sul foi colonizada por _________"],
-            ["independente", "Tornou-se politicamente ___________ em 1961"],
+            ["Independente", "Tornou-se politicamente ___________ em 1961"],
             ["Elefante", "Na África do Sul você pode encontrar o mamífero terrestre de maior tamanho, que é o ________ africano"],
-            ["praias", "É proibido consumir bebida alcoólica em ______"],
+            ["Praias", "É proibido consumir bebida alcoólica em ______"],
             ["Segregação", "Mesmo após o fim do regime apartheid, a _________ racial ainda é visível neste país"],
-            ["casamentos", "Durante o apartheid, uma das leis era: proibição de ___________ entre brancos e negros"]
+            ["Casamentos", "Durante o apartheid, uma das leis era: proibição de ___________ entre brancos e negros"]
         ], 
         "hard": [
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""]
+            ["Apartheid", "O ________ terminou em 1994 com as primeiras eleições que permitiram a participação de todos os eleitores adultos"],
+            ["Onze", "Na localidade, falam-se _____ línguas, mas a predominante é o inglês"],
+            ["Sul", "A África do Sul é um país que fica localizado no extremo ___ do continente africano"],
+            ["Rand", "A moeda local é o _____"],
+            ["cinco", "Equiparado ao Brasil, o fuso horário do país está adiantado em _____ horas"],
+            ["Brasil", "O clima do país é semelhante ao clima do sul do _____"],
+            ["petróleo", "É um país abundante em ________ e em recursos minerais"],
+            ["dividido", "O continente africano foi _______, ao longo do período neocolonialista"],
+            ["colonização", "Os conflitos na África possuem diversas motivações, que remontam da época da _______"],
+            ["Paz", "Das 14 operações de ___ da Organização da Nações Unidas, 7 acontecem na África."]
         ]
-    }
+    } 
 }
 )
