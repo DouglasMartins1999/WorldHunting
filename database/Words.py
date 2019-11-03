@@ -87,15 +87,15 @@ countries.append({
             ["quente", "A Australia é super popular entre os brasucas justamente pelo clima _____"]
         ],
         "medium": [
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-        ]
+            ["Colonização", "A ______ da Austrália começou com o objetivo de esvaziar as cadeias superlotadas da Inglaterra"],
+            ["Melbourne", "______ é uma das melhores cidades do mundo para se viver"],
+            ["Polícia", " A primeira ______ local foi formada por prisioneiros"],
+            ["Feminino", "A Austrália foi a primeira nação independente a permitir o voto _______"],
+            ["Colônia", "A Austrália deixou de ser ______ em 1901"],
+            ["Capital", "Há uma lenda de que Sydney e Melbourne disputavam o posto de _____ do país"],
+            ["Esculturas", "A Austrália conta com cerca de 150 ______ gigantes com diferentes motivos: frutas, animais, bebidas, etc."],
+            ["Polímero", "Em 1988, o governo alterou a fabricação do dinheiro local trocando o papel por uma espécie de _______ que tem uma vida útil muito maior"],
+        ],
     }
 }
 )
