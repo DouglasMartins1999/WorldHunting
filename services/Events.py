@@ -1,4 +1,5 @@
 from pygame import *
+from services.Session import GameSession
 
 class Action:
     def __init__(self, rect, handler):
@@ -99,6 +100,13 @@ class KeyHandler:
         self.letterSequence = sequence
         self.max_letters = max_letters
 
+class StatusManager:
+    def __init__(self):
+        self.session = None
+
+    def createGame(self):
+        self.session = GameSession().getContries()
 
 events = Listener()
 keyboard = KeyHandler()
+status = StatusManager()

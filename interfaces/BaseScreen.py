@@ -3,7 +3,7 @@ from settings.environment import default
 from services.Events import events, Action
 
 class BaseScreen:
-    def __init__(self, background):
+    def __init__(self, background = pygame.Surface(default.resolution)):
         self.base_screen = self.generateScreen(background)
         self.mounted_screen = self.base_screen.copy()
         events.clearListeners()
@@ -24,7 +24,7 @@ class BaseScreen:
         return self.mounted_screen
 
 class Window:
-    def __init__(self, main):
+    def __init__(self, main = BaseScreen):
         self.current_screen = main().render
         self.stored_screens = {}
 
@@ -49,3 +49,5 @@ class Window:
 
     def render(self):
         return self.current_screen()
+
+window = Window()
