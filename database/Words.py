@@ -109,5 +109,42 @@ countries.append({
             ["Cosmopolita", "Os efeitos da Segunda Guerra contribuíram para o desenvolvimento de uma sociedade mais diversificada e _________"]
         ]
     }
+},
+{
+    "name": "África do Sul",
+    "background": "",
+    "categories": {
+        "easy": [
+            ["Africano", "A África do Sul é um país situado na extremidade sul do continente _______"],
+            ["Nobel", "A África do Sul tem 10 prêmios _____"],
+            ["Carne", "Os sul-africanos amam _____"],
+            ["Três", "A África do Sul tem ____ capitais"],
+            ["Vinhos", "Os _____ locais são excelentes"],
+            ["Leis", "As ____ de trânsito são parecidas com as brasileiras"],
+            ["Marula", "A fruta típica da África do Sul é a _______"]
+        ], 
+        "medium": [
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""]
+        ],
+        "hard": [
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""]
+        ]
+    }
 }
 )
