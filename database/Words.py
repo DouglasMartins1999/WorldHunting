@@ -74,5 +74,28 @@ countries.append({
         ]
     }
 },
-
+{
+    "name": "Austrália",
+    "background":"",
+    "categories": {
+        "easy": [
+            ["Índico", "A Austrália é um país continental cercado pelos oceanos ______ e Pacífico"],
+            ["Sydney", " O país é conhecido pela ______ Opera House"],
+            ["Outback", "O país é conhecido pelo vasto deserto interior chamado _______"],
+            ["Canguru", "_______ é uma espécie endêmica da Austrália"],
+            ["Melbourne", "_______ capital do estado de Victoria, é segunda cidade mais populosa do país"],
+            ["quente", "A Australia é super popular entre os brasucas justamente pelo clima _____"]
+        ],
+        "medium": [
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+        ]
+    }
+}
 )
