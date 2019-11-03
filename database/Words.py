@@ -37,7 +37,9 @@ countries.append({
         ]
     }
 },
-{
+)
+
+countries.append({
     "name": "China",
     "background": "",
     "categories": {
@@ -73,44 +75,9 @@ countries.append({
             ["Filho único", "Preocupada com seu crescimento populacional, tentou implementar uma política de planejamento familiar, chamada: política do ____ _____"]
         ]
     }
-},
-{
-    "name": "Austrália",
-    "background":"",
-    "categories": {
-        "easy": [
-            ["Índico", "A Austrália é um país continental cercado pelos oceanos ______ e Pacífico"],
-            ["Sydney", " O país é conhecido pela ______ Opera House"],
-            ["Outback", "O país é conhecido pelo vasto deserto interior chamado _______"],
-            ["Canguru", "_______ é uma espécie endêmica da Austrália"],
-            ["Melbourne", "_______ capital do estado de Victoria, é segunda cidade mais populosa do país"],
-            ["quente", "A Australia é super popular entre os brasucas justamente pelo clima _____"]
-        ],
-        "medium": [
-            ["Colonização", "A ______ da Austrália começou com o objetivo de esvaziar as cadeias superlotadas da Inglaterra"],
-            ["Melbourne", "______ é uma das melhores cidades do mundo para se viver"],
-            ["Polícia", " A primeira ______ local foi formada por prisioneiros"],
-            ["Feminino", "A Austrália foi a primeira nação independente a permitir o voto _______"],
-            ["Colônia", "A Austrália deixou de ser ______ em 1901"],
-            ["Capital", "Há uma lenda de que Sydney e Melbourne disputavam o posto de _____ do país"],
-            ["Esculturas", "A Austrália conta com cerca de 150 ______ gigantes com diferentes motivos: frutas, animais, bebidas, etc."],
-            ["Polímero", "Em 1988, o governo alterou a fabricação do dinheiro local trocando o papel por uma espécie de _______ que tem uma vida útil muito maior"],
-        ],
-        "hard": [
-            ["Aumentar", "Existe um grande incentivo do governo para ______ a população local"],
-            ["Gastronomia", "A capital mundial da ______ fica na Austrália"],
-            ["Perth", "______ é a cidade mais isolada do mundo"],
-            ["Gratuito", "Tem transporte público ______"],
-            ["Sydney", "_____ não é a capital da Austrália"],
-            ["Igualdade", " segundo país do mundo que olhou de forma crítica para a ________ de gênero "],
-            ["Estudantes", "Terceiro país mais procurado por ________ estrangeiros"],
-            ["Restrito", "O consumo de bebidas alcoólicas na Austrália é muito ______"],
-            ["Economia", "A Segunda Guerra Mundial contribuiu para grandes mudanças na _______ do país"],
-            ["Cosmopolita", "Os efeitos da Segunda Guerra contribuíram para o desenvolvimento de uma sociedade mais diversificada e _________"]
-        ]
-    }
-},
-{
+})
+
+countries.append({
     "name": "África do Sul",
     "background": "",
     "categories": {
@@ -146,5 +113,40 @@ countries.append({
             ["Paz", "Das 14 operações de ___ da Organização da Nações Unidas, 7 acontecem na África."]
         ]
     } 
-}
-)
+})
+countries.append({
+    "name": "Austrália",
+    "background":"",
+    "categories": {
+        "easy": [
+            ["Índico", "A Austrália é um país continental cercado pelos oceanos ______ e Pacífico"],
+            ["Sydney", " O país é conhecido pela ______ Opera House"],
+            ["Outback", "O país é conhecido pelo vasto deserto interior chamado _______"],
+            ["Canguru", "_______ é uma espécie endêmica da Austrália"],
+            ["Melbourne", "_______ capital do estado de Victoria, é segunda cidade mais populosa do país"],
+            ["quente", "A Australia é super popular entre os brasucas justamente pelo clima _____"]
+        ],
+        "medium": [
+            ["Colonização", "A ______ da Austrália começou com o objetivo de esvaziar as cadeias superlotadas da Inglaterra"],
+            ["Melbourne", "______ é uma das melhores cidades do mundo para se viver"],
+            ["Polícia", " A primeira ______ local foi formada por prisioneiros"],
+            ["Feminino", "A Austrália foi a primeira nação independente a permitir o voto _______"],
+            ["Colônia", "A Austrália deixou de ser ______ em 1901"],
+            ["Capital", "Há uma lenda de que Sydney e Melbourne disputavam o posto de _____ do país"],
+            ["Esculturas", "A Austrália conta com cerca de 150 ______ gigantes com diferentes motivos: frutas, animais, bebidas, etc."],
+            ["Polímero", "Em 1988, o governo alterou a fabricação do dinheiro local trocando o papel por uma espécie de _______ que tem uma vida útil muito maior"],
+        ],
+        "hard": [
+            ["Aumentar", "Existe um grande incentivo do governo para ______ a população local"],
+            ["Gastronomia", "A capital mundial da ______ fica na Austrália"],
+            ["Perth", "______ é a cidade mais isolada do mundo"],
+            ["Gratuito", "Tem transporte público ______"],
+            ["Sydney", "_____ não é a capital da Austrália"],
+            ["Igualdade", " segundo país do mundo que olhou de forma crítica para a ________ de gênero "],
+            ["Estudantes", "Terceiro país mais procurado por ________ estrangeiros"],
+            ["Restrito", "O consumo de bebidas alcoólicas na Austrália é muito ______"],
+            ["Economia", "A Segunda Guerra Mundial contribuiu para grandes mudanças na _______ do país"],
+            ["Cosmopolita", "Os efeitos da Segunda Guerra contribuíram para o desenvolvimento de uma sociedade mais diversificada e _________"]
+        ]
+    }
+})
