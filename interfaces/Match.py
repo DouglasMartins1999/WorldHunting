@@ -12,13 +12,11 @@ class Match(BaseScreen):
         self.session = level_session
         self.color = level_colors[self.session.level]
         self.revealed_words = []
-        self.hint = ""
+        self.hint = 0
 
         self.staticElements()
         self.setBaseRevealedArray()
         self.renderRevealedWords()
-        self.renderHint("5. A queda da _______ em 1789 foi fator deterministico para o início da revolução francesa")
-        self.renderCrossword()
 
     def staticElements(self):
         level = text("Nível {}: ".format(self.session.level), "asap/bold.ttf", 16, self.color, (60, 25))
@@ -34,20 +32,18 @@ class Match(BaseScreen):
         self.addButton(icons["reveal_letter"], (155, 508), (36, 36), None, self.base_screen)
 
         # Hint Buttons
-        self.addButton(icons["hint"]["prev"][self.session.level], (477, 500), (27, 27), None, self.base_screen)
-        self.addButton(icons["hint"]["next"][self.session.level], (937, 500), (27, 27), None, self.base_screen)
+        self.addButton(icons["hint"]["prev"][self.session.level], (477, 500), (27, 27), self.removeFromHint, self.base_screen)
+        self.addButton(icons["hint"]["next"][self.session.level], (937, 500), (27, 27), self.addToHint, self.base_screen)
 
         self.mounted_screen = self.base_screen.copy()
 
-    def renderHint(self, hint):
-        hint_text = text(hint, "asap/bold.ttf", 16, "#FFFFFF", (392, 64))
-        self.mounted_screen.blit(hint_text, (528, 507))
+    def renderHint(self):
+        hint = self.hint
+        hint_text = str(hint + 1) + ". " + self.session.crossword.structure[hint].hint
+        hint_label = text(hint_text, "asap/bold.ttf", 16, "#FFFFFF", (392, 64))
 
-    def setBaseRevealedArray(self):
-        crossword = self.session.crossword.structure
-
-        for word in crossword:
-            self.revealed_words.append([])
+        self.mounted_screen = self.base_screen.copy()
+        self.mounted_screen.blit(hint_label, (528, 507))
 
     def renderRevealedWords(self):
         posX = (100, 235)
@@ -88,5 +84,23 @@ class Match(BaseScreen):
                 self.mounted_screen.blit(letter_label, (posX + 8, posY))
 
     def render(self):
+        self.renderHint()
         self.renderCrossword()
         return super().render()
+
+
+
+
+    def setBaseRevealedArray(self):
+        crossword = self.session.crossword.structure
+
+        for word in crossword:
+            self.revealed_words.append([])
+
+    def addToHint(self, act):
+        if self.hint < (len(self.session.crossword.structure) - 1):
+            self.hint += 1
+
+    def removeFromHint(self, act):
+        if self.hint > 0:
+            self.hint -= 1

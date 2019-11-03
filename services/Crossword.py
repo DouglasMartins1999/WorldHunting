@@ -52,8 +52,9 @@ class Crossword:
 
     def breakIntoLetters(self):
         words = self.wordrange
-        words = list(map(lambda word: word[0], words))
-        words = list(map(lambda word: list(map(lambda letter: CrosswordLetter(letter, False), word)), words))
+        # words = list(map(lambda word: word[0], words))
+        # words = list(map(lambda word: list(map(lambda letter: CrosswordLetter(letter, False), word)), words))
+        words = list(map(lambda word: [list(map(lambda letter: CrosswordLetter(letter, False), word[0])), word[1]] , words))
         return words
 
     def generateStructure(self):
@@ -64,10 +65,17 @@ class Crossword:
 
         try:
             word = words.pop(0)
-            sequence.append(CrosswordWord(word, True, 0, 0))
+            sequence.append(CrosswordWord(word[0], True, 0, 0, word[1]))
+
+            seq = sequence[0]
+            print(seq.toWord())
+            print(seq.posX)
+            print(seq.posY)
+            print(seq.hint)
+            print(seq.isVertical)
             
 
-            while len(words) and last != word[0] and len(sequence) < (self.level * 3):
+            while len(words) and last != words[0] and len(sequence) < (self.level * 3):
                 last = word = words.pop(0)
                 crossed = self.__getCrossed(word, sequence)
 
@@ -91,7 +99,7 @@ class Crossword:
     def __getCrossed(self, word, sequence):
         for mainword in sequence:
             for iM, lM in enumerate(mainword.word):
-                for iW, lW in enumerate(word):
+                for iW, lW in enumerate(word[0]):
                     # Possivel união
                     if lM.letter == lW.letter and not lM.isFilled and not lW.isFilled:
                         direction = not mainword.isVertical
@@ -111,7 +119,7 @@ class Crossword:
                         lW.isFilled = True
                         lM.isFilled = True
                         
-                        return CrosswordWord(word, direction, posX, posY)
+                        return CrosswordWord(word[0], direction, posX, posY, word[1])
 
         return None
 
@@ -139,11 +147,12 @@ class CrosswordLetter:
 
 
 class CrosswordWord:
-    def __init__(self, word = [CrosswordLetter()], isVertical = True, posX = 0, posY = 0):
+    def __init__(self, word = [CrosswordLetter()], isVertical = True, posX = 0, posY = 0, hint = ""):
         self.word = word
         self.isVertical = isVertical
         self.posX = posX
         self.posY = posY
+        self.hint = hint
 
     def toWord(self):
         letters = list(map(lambda l: l.letter, self.word))
