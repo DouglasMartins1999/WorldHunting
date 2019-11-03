@@ -63,8 +63,9 @@ class Match(BaseScreen):
         crossword_size = crossword.getSize()
 
         def textHander():
-            word_index = n
-            return lambda act: keyboard.setLetterSequence(self.revealed_words[word_index])
+            word = self.revealed_words[n]
+            max_letters = len(crossword.structure[n].word)
+            return lambda act: keyboard.setLetterSequence(word, max_letters)
 
         for n, word in enumerate(crossword.structure):
             for i, letter in enumerate(word.word):

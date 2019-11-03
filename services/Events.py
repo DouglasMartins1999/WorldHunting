@@ -75,6 +75,7 @@ class KeyHandler:
             K_z: "Z",
         }
         self.letterSequence = []
+        self.max_letters = 500
 
     def checkLetter(self, event):
         letter = None
@@ -89,14 +90,15 @@ class KeyHandler:
     def printLetters(self, event):
         letter = self.checkLetter(event)
 
-        if letter != None:
+        if letter != None and len(self.letterSequence) < self.max_letters:
             self.letterSequence.append(letter)
 
         if event == K_BACKSPACE and len(self.letterSequence) > 0:
             self.letterSequence.pop()
 
-    def setLetterSequence(self, sequence):
+    def setLetterSequence(self, sequence, max_letters = 500):
         self.letterSequence = sequence
+        self.max_letters = max_letters
 
 
 events = Listener()
