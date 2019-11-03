@@ -57,15 +57,17 @@ class Crossword:
         return words
 
     def generateStructure(self):
-        words = self.words
+        words = self.words.copy()
         sequence = []
         last = None
+        shuffle(words)
 
         try:
             word = words.pop(0)
             sequence.append(CrosswordWord(word, True, 0, 0))
+            
 
-            while len(words) and last != word[0]:
+            while len(words) and last != word[0] and len(sequence) < (self.level * 3):
                 last = word = words.pop(0)
                 crossed = self.__getCrossed(word, sequence)
 
@@ -73,6 +75,13 @@ class Crossword:
                     sequence.append(crossed)
                 else:
                     words.append(word)
+
+            addX = min(sequence, key = lambda word: word.posX).posX * -1
+            addY = min(sequence, key = lambda word: word.posY).posY * -1
+
+            for seq in sequence:
+                seq.posX += addX
+                seq.posY += addY
 
         except IndexError:
             return
@@ -106,7 +115,7 @@ class Crossword:
 
 class CrosswordLetter:
     def __init__(self, letter = "A", isFilled = False):
-        self.letter = letter
+        self.letter = letter.upper()
         self.isFilled = isFilled
 
     def toogleFill(self):

@@ -23,6 +23,7 @@ class Match(BaseScreen):
         self.staticElements()
         self.renderRevealedWords()
         self.renderHint("5. A queda da _______ em 1789 foi fator deterministico para o início da revolução francesa")
+        self.renderCrossword()
 
     def staticElements(self):
         level = text("Nível {}: ".format(self.session.level), "asap/bold.ttf", 16, self.color, (60, 25))
@@ -56,3 +57,25 @@ class Match(BaseScreen):
             self.mounted_screen.blit(word_label, (posX[i % 2], posY))
             if (i % 2 == 1): 
                 posY += 30
+
+    def renderCrossword(self):
+        crossword = self.session.crossword.structure
+        box = icons["letter_box"]
+        box_rect = (30, 30)
+
+        for word in crossword:
+            for i, letter in enumerate(word.word):
+                adiction = (i * box_rect[1])
+                posX = word.posX * box_rect[0] + 444
+                posY = word.posY * box_rect[1] + 41
+
+                if(word.isVertical):
+                    posY += adiction
+                else:
+                    posX += adiction
+
+                letter_label = text(letter.letter, "mclaren/regular.ttf", 20, self.color, (30, 30))
+
+                self.mounted_screen.blit(box, (posX, posY))
+                self.mounted_screen.blit(letter_label, (posX + 8, posY))
+

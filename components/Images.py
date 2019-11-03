@@ -7,6 +7,7 @@ def load(path):
 icons = {
     "appicon": load("appicon.png"),
 
+    "letter_box": load("buttons/match_screen/letter_box.png"),
     "cancel": load("buttons/match_screen/cancel.png"),
     "disable_sound": load("buttons/match_screen/disable_sound.png"),
     "enable_sound": load("buttons/match_screen/enable_sound.png"),
