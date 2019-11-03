@@ -92,16 +92,10 @@ class KeyHandler:
         if letter != None:
             self.letterSequence.append(letter)
 
-        if (event == K_BACKSPACE):
-            try:
-                self.letterSequence.pop()
-            except:
-                print()
-
-        print(self.letterSequence)
+        if event == K_BACKSPACE and len(self.letterSequence) > 0:
+            self.letterSequence.pop()
 
     def setLetterSequence(self, sequence):
-        print("Changing", self.letterSequence, sequence)
         self.letterSequence = sequence
 
 

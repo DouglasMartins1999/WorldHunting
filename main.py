@@ -23,11 +23,9 @@ while 1:
     for event in pygame.event.get():
         if event.type == pygame.QUIT: sys.exit()
         if event.type == pygame.MOUSEBUTTONDOWN:
-            mouse = pygame.mouse.get_pos()
-            events.callListeners(mouse)
+            events.callListeners(event.pos)
         if event.type == pygame.KEYDOWN:
             keyboard.printLetters(event.key)
-
 
     main_screen.blit(match.render(), default.initial_pos)
     pygame.display.flip()

@@ -12,6 +12,7 @@ class Match(BaseScreen):
         self.session = level_session
         self.color = level_colors[self.session.level]
         self.revealed_words = []
+        self.hint = ""
 
         self.staticElements()
         self.setBaseRevealedArray()
@@ -65,30 +66,25 @@ class Match(BaseScreen):
         crossword_area_size = (544, 416)
         crossword_size = crossword.getSize()
 
+        def textHander():
+            word_index = n
+            return lambda act: keyboard.setLetterSequence(self.revealed_words[word_index])
+
         for n, word in enumerate(crossword.structure):
             for i, letter in enumerate(word.word):
-                def textHander():
-                    l = n
-                    return lambda act: keyboard.setLetterSequence(self.revealed_words[l])
-
-                adiction = (i * box_rect[1])
+                assigned_letter = self.revealed_words[n][i] if len(self.revealed_words[n]) > i else ""
                 posX = word.posX * box_rect[0] + 444 + (crossword_area_size[0] - crossword_size[0]) / 2
                 posY = word.posY * box_rect[1] + 51 + (crossword_area_size[1] - crossword_size[1]) / 2
+                adiction = (i * box_rect[1])
 
-                if(word.isVertical):
+                if word.isVertical:
                     posY += adiction
                 else:
                     posX += adiction
 
-                try:
-                    assigned_letter = self.revealed_words[n][i]
-                except:
-                    assigned_letter = ""
-
                 letter_label = text(assigned_letter, "mclaren/regular.ttf", 20, self.color, (30, 30))
 
-                # print(n, self.revealed_words[n])
-                self.addButton(box, (posX, posY), (32, 32), textHander(), self.mounted_screen)
+                self.addButton(box, (posX, posY), box_rect, textHander(), self.mounted_screen)
                 self.mounted_screen.blit(letter_label, (posX + 8, posY))
 
     def render(self):
