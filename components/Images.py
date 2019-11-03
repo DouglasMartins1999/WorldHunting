@@ -35,7 +35,7 @@ icons = {
 
 backgrounds = {
     "main-screen": load("backgrounds/main_screen.png"),
-    "dialogs": load("screens/Falas de Josh.png"),
+    "dialogs": load("backgrounds/dialog_screen.png"),
 
     "França": load("backgrounds/countries/france.png"),
     "China": load("backgrounds/countries/china.png")
