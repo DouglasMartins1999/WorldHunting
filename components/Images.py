@@ -37,7 +37,9 @@ backgrounds = {
     "main-screen": load("backgrounds/main_screen.png"),
 
     "França": load("backgrounds/countries/france.png"),
-    "China": load("backgrounds/countries/china.png")
+    "China": load("backgrounds/countries/china.png"),
+    "Austrália": load("backgrounds/countries/australia.png"),
+    "África do Sul": load("backgrounds/countries/south_africa.png"),
 }
 
 buttons = {

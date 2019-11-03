@@ -43,10 +43,10 @@ countries.append({
         "easy": [
             ["Grande Muralha", "A China possui a maior construção do mundo, a _______ ________"],
             ["Ideografia", "Utiliza a ___________ para representar palavras e conceitos abstratos"],
-            ["Poluição", "Segundo país com mais _________ no mundo"],
+            ["Poluicao", "Segundo país com mais _________ no mundo"],
             ["Pequim","______, a enorme capital da China"],
             ["Suina", "A carne _______ é a mais consumida entre Chineses"],
-            ["Ásia", "A China é o maior país da _____ Oriental"],
+            ["Asia", "A China é o maior país da _____ Oriental"],
             ["Exercito", "O maior número de soldados do _______ encontra-se na China"]
         ],
         "medium": [
@@ -82,7 +82,7 @@ countries.append({
             ["Africano", "A África do Sul é um país situado na extremidade sul do continente _______"],
             ["Nobel", "A África do Sul tem 10 prêmios _____"],
             ["Carne", "Os sul-africanos amam _____"],
-            ["Três", "A África do Sul tem ____ capitais"],
+            ["Tres", "A África do Sul tem ____ capitais"],
             ["Vinhos", "Os _____ locais são excelentes"],
             ["Leis", "As ____ de trânsito são parecidas com as brasileiras"],
             ["Marula", "A fruta típica da África do Sul é a _______"]
@@ -94,7 +94,7 @@ countries.append({
             ["Independente", "Tornou-se politicamente ___________ em 1961"],
             ["Elefante", "Na África do Sul você pode encontrar o mamífero terrestre de maior tamanho, que é o ________ africano"],
             ["Praias", "É proibido consumir bebida alcoólica em ______"],
-            ["Segregação", "Mesmo após o fim do regime apartheid, a _________ racial ainda é visível neste país"],
+            ["Segregacao", "Mesmo após o fim do regime apartheid, a _________ racial ainda é visível neste país"],
             ["Casamentos", "Durante o apartheid, uma das leis era: proibição de ___________ entre brancos e negros"]
         ], 
         "hard": [
@@ -104,7 +104,7 @@ countries.append({
             ["Rand", "A moeda local é o _____"],
             ["cinco", "Equiparado ao Brasil, o fuso horário do país está adiantado em _____ horas"],
             ["Brasil", "O clima do país é semelhante ao clima do sul do _____"],
-            ["petróleo", "É um país abundante em ________ e em recursos minerais"],
+            ["petroleo", "É um país abundante em ________ e em recursos minerais"],
             ["dividido", "O continente africano foi _______, ao longo do período neocolonialista"],
             ["colonização", "Os conflitos na África possuem diversas motivações, que remontam da época da _______"],
             ["Paz", "Das 14 operações de ___ da Organização da Nações Unidas, 7 acontecem na África."]
@@ -117,7 +117,7 @@ countries.append({
     "background":"",
     "categories": {
         "easy": [
-            ["Índico", "A Austrália é um país continental cercado pelos oceanos ______ e Pacífico"],
+            ["Indico", "A Austrália é um país continental cercado pelos oceanos ______ e Pacífico"],
             ["Sydney", " O país é conhecido pela ______ Opera House"],
             ["Outback", "O país é conhecido pelo vasto deserto interior chamado _______"],
             ["Canguru", "_______ é uma espécie endêmica da Austrália"],
@@ -127,12 +127,12 @@ countries.append({
         "medium": [
             ["Colonização", "A ______ da Austrália começou com o objetivo de esvaziar as cadeias superlotadas da Inglaterra"],
             ["Melbourne", "______ é uma das melhores cidades do mundo para se viver"],
-            ["Polícia", " A primeira ______ local foi formada por prisioneiros"],
+            ["Policia", " A primeira ______ local foi formada por prisioneiros"],
             ["Feminino", "A Austrália foi a primeira nação independente a permitir o voto _______"],
-            ["Colônia", "A Austrália deixou de ser ______ em 1901"],
+            ["Colonia", "A Austrália deixou de ser ______ em 1901"],
             ["Capital", "Há uma lenda de que Sydney e Melbourne disputavam o posto de _____ do país"],
             ["Esculturas", "A Austrália conta com cerca de 150 ______ gigantes com diferentes motivos: frutas, animais, bebidas, etc."],
-            ["Polímero", "Em 1988, o governo alterou a fabricação do dinheiro local trocando o papel por uma espécie de _______ que tem uma vida útil muito maior"],
+            ["Polimero", "Em 1988, o governo alterou a fabricação do dinheiro local trocando o papel por uma espécie de _______ que tem uma vida útil muito maior"],
         ],
         "hard": [
             ["Aumentar", "Existe um grande incentivo do governo para ______ a população local"],
