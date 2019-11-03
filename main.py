@@ -7,6 +7,8 @@ from services.Events import events
 from interfaces.Initial import initial
 from interfaces.Match import Match
 
+from interfaces.Dialog import Dialog
+
 from services.Session import GameSession
 
 pygame.init()
@@ -26,4 +28,6 @@ while 1:
             events.callListeners(mouse)
 
     main_screen.blit(Match(game.sessions[0]).render(), default.initial_pos)
+    main_screen.blit(Dialog(game.sessions[0]).render(),  default.initial_pos)
+
     pygame.display.flip()
