@@ -74,6 +74,13 @@ class Match(BaseScreen):
                 posY = word.posY * box_rect[1] + 51 + (crossword_area_size[1] - crossword_size[1]) / 2
                 adiction = (i * box_rect[1])
 
+                if i == 0:
+                    word_pos = text(str(n + 1) + ".", "asap/bold.ttf", 16, "#3B3B3B", (20, 20))
+                    word_pos_X = posX + 10 if word.isVertical else posX - 20
+                    word_pos_Y = posY + 7 if not word.isVertical else posY - 22
+
+                    self.mounted_screen.blit(word_pos, (word_pos_X, word_pos_Y))
+
                 if word.isVertical:
                     posY += adiction
                 else:
