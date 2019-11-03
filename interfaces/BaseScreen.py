@@ -22,3 +22,30 @@ class BaseScreen:
 
     def render(self):
         return self.mounted_screen
+
+class Window:
+    def __init__(self, main):
+        self.current_screen = main().render
+        self.stored_screens = {}
+
+    def defineScreen(self, screen = BaseScreen, *args):
+        self.current_screen = screen(*args).render
+        return self
+
+    def defineCreatedScreen(self, screen = BaseScreen()):
+        self.current_screen = screen.render
+        return self
+
+    def storeScreen(self, screen, title):
+        self.stored_screens[title] = screen
+        return self
+
+    def restorePrevScreen(self, title = None):
+        try:
+            screen = self.stored_screens[title]
+            self.current_screen = screen.render
+        except:
+            return self
+
+    def render(self):
+        return self.current_screen()

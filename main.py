@@ -4,8 +4,10 @@ from components.Fonts import text
 from settings.environment import default
 from services.Events import events, keyboard
 
-from interfaces.Initial import initial
+from interfaces.Initial import Initial
 from interfaces.Match import Match
+
+from interfaces.BaseScreen import Window
 
 from services.Session import GameSession
 
@@ -18,6 +20,7 @@ game = GameSession().getContries().addNewSession().game
 
 main_screen = pygame.display.set_mode(default.resolution)
 match = Match(game.sessions[0])
+window = Window(Initial)
 
 while 1:
     for event in pygame.event.get():
@@ -25,7 +28,8 @@ while 1:
         if event.type == pygame.MOUSEBUTTONDOWN:
             events.callListeners(event.pos)
         if event.type == pygame.KEYDOWN:
+            window.defineScreen(Match, game.sessions[0])
             keyboard.printLetters(event.key)
 
-    main_screen.blit(match.render(), default.initial_pos)
+    main_screen.blit(window.render(), default.initial_pos)
     pygame.display.flip()

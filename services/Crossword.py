@@ -52,8 +52,6 @@ class Crossword:
 
     def breakIntoLetters(self):
         words = self.wordrange
-        # words = list(map(lambda word: word[0], words))
-        # words = list(map(lambda word: list(map(lambda letter: CrosswordLetter(letter, False), word)), words))
         words = list(map(lambda word: [list(map(lambda letter: CrosswordLetter(letter, False), word[0])), word[1]] , words))
         return words
 
@@ -66,7 +64,7 @@ class Crossword:
         try:
             word = words.pop(0)
             sequence.append(CrosswordWord(word[0], True, 0, 0, word[1]))
-            
+
             while len(words) and last != words[0] and len(sequence) < (self.level * 3):
                 last = word = words.pop(0)
                 crossed = self.__getCrossed(word, sequence)
