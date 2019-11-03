@@ -5,6 +5,7 @@ from components.Color import level_colors
 from services.Session import LevelSession
 from services.Events import keyboard
 from settings.environment import level_names
+import sys
 
 class Match(BaseScreen):
     def __init__(self, level_session):
@@ -12,11 +13,12 @@ class Match(BaseScreen):
         self.session = level_session
         self.color = level_colors[self.session.level]
         self.revealed_words = []
+        self.typing_words = []
         self.hint = 0
 
         self.staticElements()
-        self.setBaseRevealedArray()
-        self.renderRevealedWords()
+        self.setBaseTypingArray()
+        
 
     def staticElements(self):
         level = text("Nível {}: ".format(self.session.level), "asap/bold.ttf", 16, self.color, (60, 25))
@@ -50,7 +52,7 @@ class Match(BaseScreen):
         posY = 100
 
         for i, word in enumerate(self.revealed_words):
-            word_label = text("".join(word).capitalize(), "asap/regular.ttf", 16, "#FFFFFF", (125, 25))
+            word_label = text(word.capitalize(), "asap/regular.ttf", 16, "#FFFFFF", (125, 25))
             self.mounted_screen.blit(word_label, (posX[i % 2], posY))
             if (i % 2 == 1): 
                 posY += 30
@@ -63,13 +65,13 @@ class Match(BaseScreen):
         crossword_size = crossword.getSize()
 
         def textHander():
-            word = self.revealed_words[n]
+            word = self.typing_words[n]
             max_letters = len(crossword.structure[n].word)
             return lambda act: keyboard.setLetterSequence(word, max_letters)
 
         for n, word in enumerate(crossword.structure):
             for i, letter in enumerate(word.word):
-                assigned_letter = self.revealed_words[n][i] if len(self.revealed_words[n]) > i else ""
+                assigned_letter = self.typing_words[n][i] if len(self.typing_words[n]) > i else ""
                 posX = word.posX * box_rect[0] + 444 + (crossword_area_size[0] - crossword_size[0]) / 2
                 posY = word.posY * box_rect[1] + 51 + (crossword_area_size[1] - crossword_size[1]) / 2
                 adiction = (i * box_rect[1])
@@ -93,17 +95,19 @@ class Match(BaseScreen):
 
     def render(self):
         self.renderHint()
+        self.renderRevealedWords()
         self.renderCrossword()
+        self.checkCorrectWords()
         return super().render()
 
 
 
 
-    def setBaseRevealedArray(self):
+    def setBaseTypingArray(self):
         crossword = self.session.crossword.structure
 
         for word in crossword:
-            self.revealed_words.append([])
+            self.typing_words.append([])
 
     def addToHint(self, act):
         if self.hint < (len(self.session.crossword.structure) - 1):
@@ -112,3 +116,18 @@ class Match(BaseScreen):
     def removeFromHint(self, act):
         if self.hint > 0:
             self.hint -= 1
+
+    def checkCorrectWords(self):
+        for index, typed in enumerate(self.typing_words):
+            typed = "".join(typed)
+            word_related = self.session.crossword.structure[index].toWord()
+            
+            if word_related == typed:
+                if not (word_related in self.revealed_words):
+                    self.revealed_words.append(word_related)
+                    self.checkMatchEnd()
+
+    def checkMatchEnd(self):
+        if len(self.revealed_words) == len(self.session.crossword.structure):
+            print("Parabéns! Fase Concluída")
+            sys.exit()

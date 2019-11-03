@@ -66,15 +66,7 @@ class Crossword:
         try:
             word = words.pop(0)
             sequence.append(CrosswordWord(word[0], True, 0, 0, word[1]))
-
-            seq = sequence[0]
-            print(seq.toWord())
-            print(seq.posX)
-            print(seq.posY)
-            print(seq.hint)
-            print(seq.isVertical)
             
-
             while len(words) and last != words[0] and len(sequence) < (self.level * 3):
                 last = word = words.pop(0)
                 crossed = self.__getCrossed(word, sequence)

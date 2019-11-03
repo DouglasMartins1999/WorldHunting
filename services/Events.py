@@ -20,7 +20,6 @@ class Listener:
     def replaceListener(self, old_action, new_action):
         self.removeListener(old_action)
         self.addListener(new_action)
-        print("Add aqui")
         return self
 
     def clearListeners(self):
