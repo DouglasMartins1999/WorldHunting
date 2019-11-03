@@ -35,6 +35,7 @@ icons = {
 
 backgrounds = {
     "main-screen": load("backgrounds/main_screen.png"),
+    "blurred": load("backgrounds/blurred_bg.png"),
 
     "França": load("backgrounds/countries/france.png"),
     "China": load("backgrounds/countries/china.png"),
@@ -61,3 +62,11 @@ modals = {
     "how_play": load("modals/how_play.png"),
     "ranking": load("modals/ranking.png")
 }
+
+badges = [
+    load("badges/1_beginner.png"),
+    load("badges/2_normal.png"),
+    load("badges/3_advanced.png"),
+    load("badges/4_profissional.png"),
+    load("badges/5_master.png")
+]

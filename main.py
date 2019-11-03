@@ -11,6 +11,7 @@ pygame.display.set_caption("World Hunting")
 pygame.display.set_icon( icons["appicon"] )
 
 main_screen = pygame.display.set_mode(default.resolution)
+main_screen.fill((255, 255, 255))
 window.defineScreen(Initial)
 
 while 1:
