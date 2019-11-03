@@ -96,6 +96,18 @@ countries.append({
             ["Esculturas", "A Austrália conta com cerca de 150 ______ gigantes com diferentes motivos: frutas, animais, bebidas, etc."],
             ["Polímero", "Em 1988, o governo alterou a fabricação do dinheiro local trocando o papel por uma espécie de _______ que tem uma vida útil muito maior"],
         ],
+        "hard": [
+            ["Aumentar", "Existe um grande incentivo do governo para ______ a população local"],
+            ["Gastronomia", "A capital mundial da ______ fica na Austrália"],
+            ["Perth", "______ é a cidade mais isolada do mundo"],
+            ["Gratuito", "Tem transporte público ______"],
+            ["Sydney", "_____ não é a capital da Austrália"],
+            ["Igualdade", " segundo país do mundo que olhou de forma crítica para a ________ de gênero "],
+            ["Estudantes", "Terceiro país mais procurado por ________ estrangeiros"],
+            ["Restrito", "O consumo de bebidas alcoólicas na Austrália é muito ______"],
+            ["Economia", "A Segunda Guerra Mundial contribuiu para grandes mudanças na _______ do país"],
+            ["Cosmopolita", "Os efeitos da Segunda Guerra contribuíram para o desenvolvimento de uma sociedade mais diversificada e _________"]
+        ]
     }
 }
 )
