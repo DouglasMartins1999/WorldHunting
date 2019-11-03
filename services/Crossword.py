@@ -105,12 +105,27 @@ class Crossword:
                             posX = mainword.posX + iM
                             posY = mainword.posY - iW
 
+                        if ((posX + len(word)) > 16 or (posY + len(word)) > 15):
+                            break
+
                         lW.isFilled = True
                         lM.isFilled = True
                         
                         return CrosswordWord(word, direction, posX, posY)
 
         return None
+
+    def getSize(self, block_size = 32):
+        vertical = list(filter(lambda word: word.isVertical, self.structure))
+        horizontal = list(filter(lambda word: (not word.isVertical), self.structure))
+
+        max_width = max(horizontal, key=lambda word: word.posX + len(word.word))
+        max_height = max(vertical, key=lambda word: word.posY + len(word.word))
+
+        width = (max_width.posX + len(max_width.word)) * block_size
+        height = (max_height.posY + len(max_height.word)) * block_size
+
+        return (width, height)
                         
 
 class CrosswordLetter:

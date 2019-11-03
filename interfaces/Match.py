@@ -59,15 +59,17 @@ class Match(BaseScreen):
                 posY += 30
 
     def renderCrossword(self):
-        crossword = self.session.crossword.structure
+        crossword = self.session.crossword
         box = icons["letter_box"]
         box_rect = (30, 30)
+        crossword_area_size = (544, 416)
+        crossword_size = crossword.getSize()
 
-        for word in crossword:
+        for word in crossword.structure:
             for i, letter in enumerate(word.word):
                 adiction = (i * box_rect[1])
-                posX = word.posX * box_rect[0] + 444
-                posY = word.posY * box_rect[1] + 41
+                posX = word.posX * box_rect[0] + 444 + (crossword_area_size[0] - crossword_size[0]) / 2
+                posY = word.posY * box_rect[1] + 51 + (crossword_area_size[1] - crossword_size[1]) / 2
 
                 if(word.isVertical):
                     posY += adiction

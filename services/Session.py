@@ -34,7 +34,7 @@ class GameSession:
         self.player = ""
         self.sessions = []
         self.countries = []
-        self.level = 0
+        self.level = 1
 
     def increaseLevel(self):
         self.level += 1
