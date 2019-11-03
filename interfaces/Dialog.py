@@ -11,11 +11,17 @@ class Dialog(BaseScreen):
         self.renderDialog()
 
     def renderDialog(self):
-        posX = 50
+        posX = (50, 50)
         posY = 410
-        phrase = "Olá!! Meu nome é Josh! Acabei de chegar de várias viagens que fiz a todos os continentes! Conheci o Brasil, a França, a Austrália, a África, e até mesmo a China."
-        phrase_wrapper = text(phrase, "asap/regular.ttf", 30, "#484848", (800, 140))
-        self.mounted_screen.blit(phrase_wrapper,  (posX, posY))
+        phrases = [
+            "Olá!! Meu nome é Josh! Acabei de chegar de várias viagens que fiz a todos os continentes! Conheci o Brasil, a França, a Austrália, a África, e até mesmo a China.",
+            "Texto 2",
+            "Texto 3",
+        ]
+
+        for i, word in enumerate(phrases):
+            phrase_wrapper = text(word, "asap/regular.ttf", 30, "#484848", (800, 140))
+            self.mounted_screen.blit(phrase_wrapper,  (posX[i % 2], posY))
 
     def renderArrowDownButton(self):
         self.addButton(icons["arrow_down"], (900, 460), (40, 36), None, self.base_screen)
