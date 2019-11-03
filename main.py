@@ -19,6 +19,7 @@ pygame.display.set_icon( icons["appicon"] )
 game = GameSession().getContries().addNewSession().game
 
 main_screen = pygame.display.set_mode(default.resolution)
+dialog = Dialog()
 
 while 1:
     for event in pygame.event.get():
@@ -27,7 +28,7 @@ while 1:
             mouse = pygame.mouse.get_pos()
             events.callListeners(mouse)
 
-    main_screen.blit(Match(game.sessions[0]).render(), default.initial_pos)
-    main_screen.blit(Dialog(game.sessions[0]).render(),  default.initial_pos)
+    # main_screen.blit(Match(game.sessions[0]).render(), default.initial_pos)
+    main_screen.blit(dialog.render(),  default.initial_pos)
 
     pygame.display.flip()
