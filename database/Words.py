@@ -35,8 +35,9 @@ countries.append({
             ["Rousseau", "Jean-Jacques ________, importante filósofo"]
         ]
     }
-},
-{
+})
+
+countries.append({
     "name": "China",
     "categories": {
         "easy": [
@@ -71,6 +72,4 @@ countries.append({
             ["Filho único", "Preocupada com seu crescimento populacional, tentou implementar uma política de planejamento familiar, chamada: política do ____ _____"]
         ]
     }
-},
-
-)
+})

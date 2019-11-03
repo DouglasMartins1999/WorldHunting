@@ -6,6 +6,7 @@ class BaseScreen:
     def __init__(self, background):
         self.base_screen = self.generateScreen(background)
         self.mounted_screen = self.base_screen.copy()
+        events.clearListeners()
 
     def generateScreen(self, background):
         screen = pygame.Surface(default.resolution)

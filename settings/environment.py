@@ -7,3 +7,12 @@ class Default:
         self.font_root = "assets/fonts/"
 
 default = Default()
+
+level_names = [
+    "Default",
+    "Iniciante",
+    "Normal",
+    "Avançado",
+    "Profissional",
+    "Master"
+]

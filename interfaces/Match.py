@@ -1,16 +1,58 @@
 from interfaces.BaseScreen import BaseScreen
-from components.Images import backgrounds
+from components.Images import backgrounds, icons
 from components.Fonts import text
 from components.Color import level_colors
-from services.LevelSession import LevelSession
+from services.Session import LevelSession
+from settings.environment import level_names
 
 class Match(BaseScreen):
-    def __init__(self, level_session = LevelSession(None, 1, [])):
-        super().__init__(backgrounds[level_session.coutry["name"]])
+    def __init__(self, level_session):
+        super().__init__(backgrounds[level_session.country["name"]])
         self.session = level_session
         self.color = level_colors[self.session.level]
+        self.revealed_words = [
+            "Torre Eiffel",
+            "Bonaparte",
+            "Francos",
+            "Marseillaise",
+            "Cem Anos",
+            "Bastilha",
+            "Luis XIV",
+            "Gália"
+        ]
         self.staticElements()
+        self.renderRevealedWords()
+        self.renderHint("5. A queda da _______ em 1789 foi fator deterministico para o início da revolução francesa")
 
     def staticElements(self):
-        level = text("Nível {}".format(self.session.level), "asap/bold.ttf", 16, self.color, (60, 18))
+        level = text("Nível {}: ".format(self.session.level), "asap/bold.ttf", 16, self.color, (60, 25))
+        level_name = text(level_names[self.session.level], "asap/regular.ttf", 16, "#000000", (120, 25))
+
         self.base_screen.blit(level, (74, 45))
+        self.base_screen.blit(level_name, (133, 45))
+        self.base_screen.blit(icons["hints_label"], (528, 477))
+
+        # Action Buttons
+        self.addButton(icons["cancel"], (74, 508), (36, 36), None, self.base_screen)
+        self.addButton(icons["disable_sound"], (114, 508), (36, 36), None, self.base_screen)
+        self.addButton(icons["reveal_letter"], (155, 508), (36, 36), None, self.base_screen)
+
+        # Hint Buttons
+        self.addButton(icons["hint"]["prev"][self.session.level], (477, 500), (27, 27), None, self.base_screen)
+        self.addButton(icons["hint"]["next"][self.session.level], (937, 500), (27, 27), None, self.base_screen)
+
+        self.mounted_screen = self.base_screen.copy()
+
+    def renderHint(self, hint):
+        hint_text = text(hint, "asap/bold.ttf", 16, "#FFFFFF", (392, 64))
+        self.mounted_screen.blit(hint_text, (528, 507))
+
+    def renderRevealedWords(self):
+        posX = (100, 235)
+        posY = 100
+
+        for i, word in enumerate(self.revealed_words):
+            word_label = text(word, "asap/regular.ttf", 16, "#FFFFFF", (125, 25))
+            self.mounted_screen.blit(word_label, (posX[i % 2], posY))
+            if (i % 2 == 1): 
+                posY += 30

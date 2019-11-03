@@ -5,7 +5,31 @@ def load(path):
     return pygame.image.load(default.image_root + path)
 
 icons = {
-    "appicon": load("appicon.png")
+    "appicon": load("appicon.png"),
+
+    "cancel": load("buttons/match_screen/cancel.png"),
+    "disable_sound": load("buttons/match_screen/disable_sound.png"),
+    "enable_sound": load("buttons/match_screen/enable_sound.png"),
+    "reveal_letter": load("buttons/match_screen/reveal_letter.png"),
+    "hints_label": load("buttons/match_screen/hints.png"),
+    "hint": {
+        "prev": [
+            load("buttons/match_screen/prev_hint_1.png"),
+            load("buttons/match_screen/prev_hint_1.png"),
+            load("buttons/match_screen/prev_hint_2.png"),
+            load("buttons/match_screen/prev_hint_3.png"),
+            load("buttons/match_screen/prev_hint_4.png"),
+            load("buttons/match_screen/prev_hint_5.png")
+        ],
+        "next": [
+            load("buttons/match_screen/next_hint_1.png"),
+            load("buttons/match_screen/next_hint_1.png"),
+            load("buttons/match_screen/next_hint_2.png"),
+            load("buttons/match_screen/next_hint_3.png"),
+            load("buttons/match_screen/next_hint_4.png"),
+            load("buttons/match_screen/next_hint_5.png")
+        ]
+    }
 }
 
 backgrounds = {
