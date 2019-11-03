@@ -3,6 +3,7 @@ from components.Images import backgrounds, icons
 from components.Fonts import text
 from components.Color import level_colors
 from services.Session import LevelSession
+from services.Events import keyboard
 from settings.environment import level_names
 
 class Match(BaseScreen):
@@ -10,17 +11,10 @@ class Match(BaseScreen):
         super().__init__(backgrounds[level_session.country["name"]])
         self.session = level_session
         self.color = level_colors[self.session.level]
-        self.revealed_words = [
-            "Torre Eiffel",
-            "Bonaparte",
-            "Francos",
-            "Marseillaise",
-            "Cem Anos",
-            "Bastilha",
-            "Luis XIV",
-            "Gália"
-        ]
+        self.revealed_words = []
+
         self.staticElements()
+        self.setBaseRevealedArray()
         self.renderRevealedWords()
         self.renderHint("5. A queda da _______ em 1789 foi fator deterministico para o início da revolução francesa")
         self.renderCrossword()
@@ -48,12 +42,18 @@ class Match(BaseScreen):
         hint_text = text(hint, "asap/bold.ttf", 16, "#FFFFFF", (392, 64))
         self.mounted_screen.blit(hint_text, (528, 507))
 
+    def setBaseRevealedArray(self):
+        crossword = self.session.crossword.structure
+
+        for word in crossword:
+            self.revealed_words.append([])
+
     def renderRevealedWords(self):
         posX = (100, 235)
         posY = 100
 
         for i, word in enumerate(self.revealed_words):
-            word_label = text(word, "asap/regular.ttf", 16, "#FFFFFF", (125, 25))
+            word_label = text("".join(word).capitalize(), "asap/regular.ttf", 16, "#FFFFFF", (125, 25))
             self.mounted_screen.blit(word_label, (posX[i % 2], posY))
             if (i % 2 == 1): 
                 posY += 30
@@ -65,8 +65,12 @@ class Match(BaseScreen):
         crossword_area_size = (544, 416)
         crossword_size = crossword.getSize()
 
-        for word in crossword.structure:
+        for n, word in enumerate(crossword.structure):
             for i, letter in enumerate(word.word):
+                def textHander():
+                    l = n
+                    return lambda act: keyboard.setLetterSequence(self.revealed_words[l])
+
                 adiction = (i * box_rect[1])
                 posX = word.posX * box_rect[0] + 444 + (crossword_area_size[0] - crossword_size[0]) / 2
                 posY = word.posY * box_rect[1] + 51 + (crossword_area_size[1] - crossword_size[1]) / 2
@@ -76,8 +80,17 @@ class Match(BaseScreen):
                 else:
                     posX += adiction
 
-                letter_label = text(letter.letter, "mclaren/regular.ttf", 20, self.color, (30, 30))
+                try:
+                    assigned_letter = self.revealed_words[n][i]
+                except:
+                    assigned_letter = ""
 
-                self.mounted_screen.blit(box, (posX, posY))
+                letter_label = text(assigned_letter, "mclaren/regular.ttf", 20, self.color, (30, 30))
+
+                # print(n, self.revealed_words[n])
+                self.addButton(box, (posX, posY), (32, 32), textHander(), self.mounted_screen)
                 self.mounted_screen.blit(letter_label, (posX + 8, posY))
 
+    def render(self):
+        self.renderCrossword()
+        return super().render()

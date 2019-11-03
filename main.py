@@ -2,7 +2,7 @@ import pygame, sys
 from components.Images import icons, buttons
 from components.Fonts import text
 from settings.environment import default
-from services.Events import events
+from services.Events import events, keyboard
 
 from interfaces.Initial import initial
 from interfaces.Match import Match
@@ -17,6 +17,7 @@ pygame.display.set_icon( icons["appicon"] )
 game = GameSession().getContries().addNewSession().game
 
 main_screen = pygame.display.set_mode(default.resolution)
+match = Match(game.sessions[0])
 
 while 1:
     for event in pygame.event.get():
@@ -24,6 +25,9 @@ while 1:
         if event.type == pygame.MOUSEBUTTONDOWN:
             mouse = pygame.mouse.get_pos()
             events.callListeners(mouse)
+        if event.type == pygame.KEYDOWN:
+            keyboard.printLetters(event.key)
 
-    main_screen.blit(Match(game.sessions[0]).render(), default.initial_pos)
+
+    main_screen.blit(match.render(), default.initial_pos)
     pygame.display.flip()
