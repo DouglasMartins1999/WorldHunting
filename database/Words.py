@@ -124,15 +124,15 @@ countries.append({
             ["Marula", "A fruta típica da África do Sul é a _______"]
         ], 
         "medium": [
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""]
-        ],
+            ["Selvagem", "A África é conhecida como lugar da vida ______"],
+            ["diversidade", "Um dos países com maior _________ populacional e geográfica"],
+            ["Holandeses", "A África do Sul foi colonizada por _________"],
+            ["independente", "Tornou-se politicamente ___________ em 1961"],
+            ["Elefante", "Na África do Sul você pode encontrar o mamífero terrestre de maior tamanho, que é o ________ africano"],
+            ["praias", "É proibido consumir bebida alcoólica em ______"],
+            ["Segregação", "Mesmo após o fim do regime apartheid, a _________ racial ainda é visível neste país"],
+            ["casamentos", "Durante o apartheid, uma das leis era: proibição de ___________ entre brancos e negros"]
+        ], 
         "hard": [
             ["", ""],
             ["", ""],
