@@ -71,3 +71,8 @@ badges = [
     load("badges/4_profissional.png"),
     load("badges/5_master.png")
 ]
+
+extras = {
+    "winner": load("badges/winner.png"),
+    "points": load("badges/points.png")
+}
