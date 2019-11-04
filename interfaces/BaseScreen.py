@@ -9,7 +9,7 @@ class BaseScreen:
         events.clearListeners()
 
     def generateScreen(self, background):
-        screen = pygame.Surface(default.resolution)
+        screen = pygame.Surface(default.resolution, pygame.SRCALPHA)
         screen.blit(background, default.initial_pos)
         return screen
 

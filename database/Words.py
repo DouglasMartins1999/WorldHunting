@@ -148,3 +148,46 @@ countries.append({
         ]
     }
 })
+
+
+countries.append({
+    "name": "Brasil",
+    "categories": {
+        "easy": [
+            ["Cristo Redentor", "Uma das 7 maravilhas do mundo"],
+            ["Salvador", "Primeira capital do país"],
+            ["Independencia", "Comemorado em 7 de setembro"],
+            ["Paulista", "Gentílico de São Paulo e principal avenida do estado"],
+            ["Globo", "Maior conglomerado de mídia da américa latina"],
+            ["Pele", "Conhecido como \"O rei do futebol\""],
+            ["Isabel", "Princesa responsável pela abolição da escravidão"],
+            ["Atlantico", "Oceano que banha o Brasil"],
+        ],
+        "medium": [
+            ["Marechal Deodoro", "Primeiro Presidente"],
+            ["Manaus", "Local do maior polo industrial do país"],
+            ["Embraer", "Fabricante nacional de aviões"],
+            ["Feijoada", "Guisado de feijão muito popular"],
+            ["Pedro I", "Primeiro Rei do Brasil"],
+            ["Caatinga", "Bioma exclusivamente brasileiro, encontrado em boa parte do nordeste"],
+            ["Niemeyer", "Oscar _______, renomado arquiteto modernista"],
+            ["Ronaldinho", "Conhecido como \"O fenômeno\", futebolista que atuou como atacante"],
+            ["Rondonia", "Estado cuja capital é Porto Velho"],
+            ["Amazonas", "Estado que recebe o nome do maior rio do país"],
+            ["Japoneses", "O Brasil abriga a maior côlonia de _______ fora do seu país"],
+            ["Aparecida", "Padroeira do Brasil"],
+            ["Planalto", "Palácio do _______, sede do poder executivo"],
+            ["Bossa Nova", "Genero musical brasileiro, surgido ao fim dos anos 50"]
+        ],
+        "hard": [
+            ["ANTT", "Uma das agências reguladoras de transportes"],
+            ["Machado de Assis", "Fundador da Academia Brasileira de Letras"],
+            ["Portinari", "Pintor Brasileiro, autor de \"O Lavrador de Café\""],
+            ["Guanabara", "Estado estinto em 1975, abrigava o antigo Distrito Federal"],
+            ["Castelo Branco", "Primeiro presidente do regime militar brasileiro"],
+            ["Paraguai", "Pais cujo Brasil, Argentina e Uruguai declaram guerra em 1864"],
+            ["Tiradentes", "Mártir brasileiro, atuante na Inconfidência Mineira. Possui um feriado em sua homenagem."],
+            ["Chui", "Cidade mais ao sul (meridional) do país"],
+        ]
+    }
+})
