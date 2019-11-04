@@ -1,4 +1,5 @@
-from interfaces.BaseScreen import BaseScreen
+from interfaces.BaseScreen import BaseScreen, window
+from interfaces.EndMatch import EndMatch
 from components.Images import backgrounds, icons
 from components.Fonts import text
 from components.Color import level_colors
@@ -129,5 +130,5 @@ class Match(BaseScreen):
 
     def checkMatchEnd(self):
         if len(self.revealed_words) == len(self.session.crossword.structure):
-            print("Parabéns! Fase Concluída")
-            sys.exit()
+            self.session.finishSession().getScore()
+            window.defineScreen(EndMatch, self.session, Match)

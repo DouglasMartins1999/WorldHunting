@@ -1,13 +1,13 @@
 from interfaces.BaseScreen import BaseScreen, window
-from interfaces.Match import Match
 from components.Images import backgrounds, buttons, extras
 from components.Fonts import text
 from settings.environment import level_names
 
 class EndMatch(BaseScreen):
-    def __init__(self, session):
+    def __init__(self, session, MatchClass):
         super().__init__(backgrounds["blurred"])
         self.session = session
+        self.match_screen = MatchClass
         self.basicElements()
 
     def basicElements(self):
@@ -24,13 +24,13 @@ class EndMatch(BaseScreen):
 
         congrats = text("Parabéns!!", "righteous/regular.ttf", 56, "#373737", (284, 125))
         levels = text(str(self.session.level) + " de " + str(len(self.session.game.countries)) + " fases", "mclaren/regular.ttf", 14, "#777777", (90, 25))
-        basic_text = text(basic_text, "asap/regular.ttf", 20, "#373737", (315, 115))
+        basic_text = text(basic_text, "asap/regular.ttf", 20, "#373737", (315, 140))
 
         score = extras["points"].copy()
         score_label = text(str(self.session.game.getGeralScore()), "asap/bold.ttf", 28, "#555555", (98, 35))
         score.blit(score_label, (45, 5))
 
-        self.addButton(start_btn, (180, 395), (205, 45), None, self.base_screen)
+        self.addButton(start_btn, (180, 395), (205, 45), self.startNextLevel, self.base_screen)
         self.base_screen.blit(congrats, (180, 120))
         self.base_screen.blit(levels, (180, 183))
         self.base_screen.blit(basic_text, (180, 237))
@@ -38,3 +38,7 @@ class EndMatch(BaseScreen):
         self.base_screen.blit(score, (640, 419))
 
         self.mounted_screen = self.base_screen.copy()
+
+    def startNextLevel(self, act):
+        self.session.game.addNewSession()
+        window.defineScreen(self.match_screen, self.session.game.getCurrentLevel())

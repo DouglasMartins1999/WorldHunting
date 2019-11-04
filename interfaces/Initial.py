@@ -4,7 +4,6 @@ from components.Fonts import text
 from settings.environment import default
 from interfaces.BaseScreen import BaseScreen, window
 from interfaces.StartMatch import StartMatch
-from interfaces.EndMatch import EndMatch
 from interfaces.Match import Match
 from services.Events import events, status, Action
 from services.Ranking import ranking
@@ -76,6 +75,6 @@ class Initial(BaseScreen):
     def startMatch(self, act):
         status.createGame()
         status.session.addNewSession().startSession()
-        window.defineScreen(EndMatch, status.session.sessions[0])
+        window.defineScreen(StartMatch, status.session.sessions[0])
 
 initial = Initial()
