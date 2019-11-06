@@ -7,10 +7,10 @@ from components.Song import mixer
 from settings.environment import level_names
 
 class EndMatch(BaseScreen):
-    def __init__(self, session, MatchClass):
+    def __init__(self, session, StartScreen):
         super().__init__(backgrounds["blurred"])
         self.session = session
-        self.match_screen = MatchClass
+        self.match_screen = StartScreen
         self.basicElements()
         mixer.music.stop(400)
         mixer.addEffect("winner")

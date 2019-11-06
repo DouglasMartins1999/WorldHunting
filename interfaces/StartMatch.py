@@ -27,5 +27,9 @@ class StartMatch(BaseScreen):
         self.mounted_screen = self.base_screen.copy()
         
     def startMatch(self, act):
-        window.defineScreen(Dialog, Match, self.session)
         mixer.addEffect("started")
+
+        if self.session.level == 1:
+            window.defineScreen(Dialog, Match, self.session, StartMatch)
+        else:
+            window.defineScreen(Match, self.session, StartMatch)

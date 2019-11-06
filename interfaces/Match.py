@@ -10,13 +10,14 @@ from settings.environment import level_names
 import sys
 
 class Match(BaseScreen):
-    def __init__(self, level_session):
+    def __init__(self, level_session, start_screen):
         super().__init__(backgrounds[level_session.country["name"]])
         self.session = level_session.startSession()
         self.color = level_colors[self.session.level]
         self.revealed_words = []
         self.typing_words = []
         self.hint = 0
+        self.__start_screen = start_screen
 
         self.staticElements()
         self.setBaseTypingArray()
@@ -142,4 +143,4 @@ class Match(BaseScreen):
     def checkMatchEnd(self):
         if len(self.revealed_words) == len(self.session.crossword.structure):
             self.session.finishSession().getScore()
-            window.defineScreen(EndMatch, self.session, Match)
+            window.defineScreen(EndMatch, self.session, self.__start_screen)
