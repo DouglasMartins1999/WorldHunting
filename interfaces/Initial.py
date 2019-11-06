@@ -13,7 +13,6 @@ class Initial(BaseScreen):
     def __init__(self):
         super().__init__(backgrounds["main-screen"])
         self.renderButtons()
-        # mixer.addEffect("winner", True)
         mixer.addBackground("menu", True)
 
     def renderButtons(self):
@@ -76,6 +75,7 @@ class Initial(BaseScreen):
             pos_score = (pos_score[0], pos_score[1] + 77)
 
     def startMatch(self, act):
+        mixer.addEffect("started")
         status.createGame()
         status.session.addNewSession().startSession()
         window.defineScreen(StartMatch, status.session.sessions[0])

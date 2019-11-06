@@ -3,8 +3,9 @@ from interfaces.EndMatch import EndMatch
 from components.Images import backgrounds, icons
 from components.Fonts import text
 from components.Color import level_colors
+from components.Song import mixer
 from services.Session import LevelSession
-from services.Events import keyboard
+from services.Events import keyboard, events
 from settings.environment import level_names
 import sys
 
@@ -19,7 +20,7 @@ class Match(BaseScreen):
 
         self.staticElements()
         self.setBaseTypingArray()
-        
+        mixer.addBackground(self.session.country["name"]).music.setVolume(0.6)
 
     def staticElements(self):
         level = text("Nível {}: ".format(self.session.level), "asap/bold.ttf", 16, self.color, (60, 25))
@@ -31,8 +32,7 @@ class Match(BaseScreen):
 
         # Action Buttons
         self.addButton(icons["cancel"], (74, 508), (36, 36), None, self.base_screen)
-        self.addButton(icons["disable_sound"], (114, 508), (36, 36), None, self.base_screen)
-        self.addButton(icons["reveal_letter"], (155, 508), (36, 36), None, self.base_screen)
+        self.addButton(icons["disable_sound"], (114, 508), (36, 36), self.disableSound, self.base_screen)
 
         # Hint Buttons
         self.addButton(icons["hint"]["prev"][self.session.level], (477, 500), (27, 27), self.removeFromHint, self.base_screen)
@@ -104,6 +104,16 @@ class Match(BaseScreen):
 
 
 
+    def disableSound(self, act):
+        mixer.pause().music.pause()
+        events.removeListener(act)
+        self.addButton(icons["enable_sound"], (114, 508), (36, 36), self.enableSound, self.base_screen)
+
+    def enableSound(self, act):
+        mixer.resume().music.resume()
+        events.removeListener(act)
+        self.addButton(icons["disable_sound"], (114, 508), (36, 36), self.disableSound, self.base_screen)
+    
     def setBaseTypingArray(self):
         crossword = self.session.crossword.structure
 
@@ -125,6 +135,7 @@ class Match(BaseScreen):
             
             if word_related == typed:
                 if not (word_related in self.revealed_words):
+                    mixer.addEffect("revealed")
                     self.revealed_words.append(word_related)
                     self.checkMatchEnd()
 

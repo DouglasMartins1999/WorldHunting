@@ -3,6 +3,7 @@ from interfaces.Match import Match
 from interfaces.Dialog import Dialog
 from components.Images import backgrounds, badges, buttons
 from components.Fonts import text
+from components.Song import mixer
 
 class StartMatch(BaseScreen):
     def __init__(self, session):
@@ -28,3 +29,4 @@ class StartMatch(BaseScreen):
     def startMatch(self, act):
         self.session.startSession()
         window.defineScreen(Dialog, Match, self.session)
+        mixer.addEffect("started")

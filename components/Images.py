@@ -9,8 +9,8 @@ icons = {
 
     "letter_box": load("buttons/match_screen/letter_box.png"),
     "cancel": load("buttons/match_screen/cancel.png"),
-    "disable_sound": load("buttons/match_screen/disable_sound.png"),
-    "enable_sound": load("buttons/match_screen/enable_sound.png"),
+    "enable_sound": load("buttons/match_screen/disable_sound.png"),
+    "disable_sound": load("buttons/match_screen/enable_sound.png"),
     "reveal_letter": load("buttons/match_screen/reveal_letter.png"),
     "hints_label": load("buttons/match_screen/hints.png"),
     "arrow_down":  load("buttons/dialog_screen/arrow_down.png"),

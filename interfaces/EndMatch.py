@@ -1,6 +1,7 @@
 from interfaces.BaseScreen import BaseScreen, window
 from components.Images import backgrounds, buttons, extras
 from components.Fonts import text
+from components.Song import mixer
 from settings.environment import level_names
 
 class EndMatch(BaseScreen):
@@ -9,6 +10,8 @@ class EndMatch(BaseScreen):
         self.session = session
         self.match_screen = MatchClass
         self.basicElements()
+        mixer.music.stop(400)
+        mixer.addEffect("winner")
 
     def basicElements(self):
         start_btn = buttons["start_match"].copy()
@@ -40,5 +43,6 @@ class EndMatch(BaseScreen):
         self.mounted_screen = self.base_screen.copy()
 
     def startNextLevel(self, act):
+        mixer.addEffect("started")
         self.session.game.addNewSession()
         window.defineScreen(self.match_screen, self.session.game.getCurrentLevel())

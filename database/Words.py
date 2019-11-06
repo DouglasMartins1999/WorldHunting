@@ -30,7 +30,7 @@ countries.append({
             ["Luis XIV", "\"Rei Sol\", luxuoso, governou a França de 1643 a 1715"],
             ["Marseillaise", "La __________, hino nacional francês"],
             ["Bastilha", "A tomada da ________ representou o inicio da revolução"],
-            ["Gália", "Nome pela qual a região da frança era conhecida no império Romano"],
+            ["Galia", "Nome pela qual a região da frança era conhecida no império Romano"],
             ["Monet", "Popular pintor impressionista: Claude ______"],
             ["Rousseau", "Jean-Jacques ________, importante filósofo"]
         ]
@@ -102,11 +102,11 @@ countries.append({
             ["Onze", "Na localidade, falam-se _____ línguas, mas a predominante é o inglês"],
             ["Sul", "A África do Sul é um país que fica localizado no extremo ___ do continente africano"],
             ["Rand", "A moeda local é o _____"],
-            ["cinco", "Equiparado ao Brasil, o fuso horário do país está adiantado em _____ horas"],
+            ["Cinco", "Equiparado ao Brasil, o fuso horário do país está adiantado em _____ horas"],
             ["Brasil", "O clima do país é semelhante ao clima do sul do _____"],
-            ["petroleo", "É um país abundante em ________ e em recursos minerais"],
-            ["dividido", "O continente africano foi _______, ao longo do período neocolonialista"],
-            ["colonização", "Os conflitos na África possuem diversas motivações, que remontam da época da _______"],
+            ["Petroleo", "É um país abundante em ________ e em recursos minerais"],
+            ["Dividido", "O continente africano foi _______, ao longo do período neocolonialista"],
+            ["Colonização", "Os conflitos na África possuem diversas motivações, que remontam da época da _______"],
             ["Paz", "Das 14 operações de ___ da Organização da Nações Unidas, 7 acontecem na África."]
         ]
     } 
@@ -122,10 +122,10 @@ countries.append({
             ["Outback", "O país é conhecido pelo vasto deserto interior chamado _______"],
             ["Canguru", "_______ é uma espécie endêmica da Austrália"],
             ["Melbourne", "_______ capital do estado de Victoria, é segunda cidade mais populosa do país"],
-            ["quente", "A Australia é super popular entre os brasucas justamente pelo clima _____"]
+            ["Quente", "A Australia é super popular entre os brasucas justamente pelo clima _____"]
         ],
         "medium": [
-            ["Colonização", "A ______ da Austrália começou com o objetivo de esvaziar as cadeias superlotadas da Inglaterra"],
+            ["Colonizacao", "A ______ da Austrália começou com o objetivo de esvaziar as cadeias superlotadas da Inglaterra"],
             ["Melbourne", "______ é uma das melhores cidades do mundo para se viver"],
             ["Policia", " A primeira ______ local foi formada por prisioneiros"],
             ["Feminino", "A Austrália foi a primeira nação independente a permitir o voto _______"],

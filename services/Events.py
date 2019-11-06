@@ -1,5 +1,6 @@
 from pygame import *
 from services.Session import GameSession
+from components.Song import mixer
 
 class Action:
     def __init__(self, rect, handler):
@@ -92,6 +93,9 @@ class KeyHandler:
 
         if letter != None and len(self.letterSequence) < self.max_letters:
             self.letterSequence.append(letter)
+            mixer.addEffect("typing")
+        else:
+            mixer.addEffect("notallowed")
 
         if event == K_BACKSPACE and len(self.letterSequence) > 0:
             self.letterSequence.pop()
