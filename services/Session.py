@@ -27,6 +27,12 @@ class LevelSession:
         time = self.finish.timestamp() - self.start.timestamp()
         self.score = round( ( level ** 2 * default.words_by_level ) / ( time / 500 ) ) * 100
         return self
+
+    def getTime(self):
+        time = self.finish.timestamp() - self.start.timestamp()
+        min = round(time // 60)
+        secs = round(time % 60)
+        return (min, secs)
         
 
 class GameSession:

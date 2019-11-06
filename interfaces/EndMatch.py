@@ -14,13 +14,14 @@ class EndMatch(BaseScreen):
         mixer.addEffect("winner")
 
     def basicElements(self):
+        time = self.session.getTime()
         start_btn = buttons["start_match"].copy()
         start_label = text("Próxima Fase", "asap/regular.ttf", 18, "#FFFFFF", (120, 25))
         start_btn.blit(start_label, (53, 12))
 
         basic_text = "Você conseguiu concluir o nível {} em {}:{} min. Sua pontuação nessa fase foi de {} pontos, e você tem {} pontos acumulados. Continue assim.".format(
             level_names[self.session.level],
-            str(5), str(40),
+            str(time[0]), str(time[1]),
             str(self.session.score),
             str(self.session.game.getGeralScore())
         )
