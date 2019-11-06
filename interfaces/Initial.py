@@ -1,6 +1,7 @@
 import pygame
 from components.Images import backgrounds, buttons, modals
 from components.Fonts import text
+from components.Song import mixer
 from settings.environment import default
 from interfaces.BaseScreen import BaseScreen, window
 from interfaces.StartMatch import StartMatch
@@ -12,6 +13,7 @@ class Initial(BaseScreen):
     def __init__(self):
         super().__init__(backgrounds["main-screen"])
         self.renderButtons()
+        mixer.addEffect("winner", True)
 
     def renderButtons(self):
         start = buttons["start_match"].copy()

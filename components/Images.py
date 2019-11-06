@@ -13,6 +13,7 @@ icons = {
     "enable_sound": load("buttons/match_screen/enable_sound.png"),
     "reveal_letter": load("buttons/match_screen/reveal_letter.png"),
     "hints_label": load("buttons/match_screen/hints.png"),
+    "arrow_down":  load("buttons/dialog_screen/arrow_down.png"),
     "hint": {
         "prev": [
             load("buttons/match_screen/prev_hint_1.png"),
@@ -36,6 +37,7 @@ icons = {
 backgrounds = {
     "main-screen": load("backgrounds/main_screen.png"),
     "blurred": load("backgrounds/blurred_bg.png"),
+    "dialogs": load("backgrounds/dialog_screen.png"),
 
     "Brasil": load("backgrounds/countries/brazil.png"),
     "França": load("backgrounds/countries/france.png"),

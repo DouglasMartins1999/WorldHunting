@@ -1,5 +1,6 @@
 from interfaces.BaseScreen import BaseScreen, window
 from interfaces.Match import Match
+from interfaces.Dialog import Dialog
 from components.Images import backgrounds, badges, buttons
 from components.Fonts import text
 
@@ -26,4 +27,4 @@ class StartMatch(BaseScreen):
         
     def startMatch(self, act):
         self.session.startSession()
-        window.defineScreen(Match, self.session)
+        window.defineScreen(Dialog, Match, self.session)
