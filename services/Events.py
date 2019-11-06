@@ -106,10 +106,14 @@ class KeyHandler:
 
 class StatusManager:
     def __init__(self):
-        self.session = None
+        self.session = []
 
     def createGame(self):
-        self.session = GameSession().getContries()
+        self.session.append(GameSession().getContries())
+
+    def getLastGame(self):
+        last = len(self.session) - 1
+        return self.session[last]
 
 events = Listener()
 keyboard = KeyHandler()

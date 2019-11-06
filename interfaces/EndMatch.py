@@ -1,3 +1,5 @@
+from services.Events import status
+from services.Ranking import ranking
 from interfaces.BaseScreen import BaseScreen, window
 from components.Images import backgrounds, buttons, extras
 from components.Fonts import text
@@ -45,5 +47,14 @@ class EndMatch(BaseScreen):
 
     def startNextLevel(self, act):
         mixer.addEffect("started")
-        self.session.game.addNewSession()
-        window.defineScreen(self.match_screen, self.session.game.getCurrentLevel())
+
+        if self.session.game.checkNewSessionPossibility():
+            self.session.game.addNewSession()
+            window.defineScreen(self.match_screen, self.session.game.getCurrentLevel())
+        else:
+            game = self.session.game
+            player = len(game.session)
+            
+            game.setPlayer("Player" + str(player))
+            ranking.addPlayer(game.player, game.getGeralScore())
+            ranking.sortRanking()

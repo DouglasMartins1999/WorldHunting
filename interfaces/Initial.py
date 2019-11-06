@@ -77,7 +77,7 @@ class Initial(BaseScreen):
     def startMatch(self, act):
         mixer.addEffect("started")
         status.createGame()
-        status.session.addNewSession().startSession()
-        window.defineScreen(StartMatch, status.session.sessions[0])
+        status.getLastGame().addNewSession().startSession()
+        window.defineScreen(StartMatch, status.getLastGame().sessions[0])
 
 initial = Initial()

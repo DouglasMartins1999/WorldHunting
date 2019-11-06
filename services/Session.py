@@ -61,6 +61,9 @@ class GameSession:
         self.sessions.append(session)
         return session
 
+    def checkNewSessionPossibility(self):
+        return ( len(self.countries) > len(self.sessions) )
+
     def getGeralScore(self):
         score = 0
         for session in self.sessions:
