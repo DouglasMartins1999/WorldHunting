@@ -65,6 +65,7 @@ class Initial(BaseScreen):
         self.mounted_screen.blit(modals["ranking"], rect)
 
         for index, p in enumerate(ranking.players):
+            if index > 4: return
             name = text(p.player, "asap/medium.ttf", 28, colors[index], (220, 35))
             score = text(str(p.score), "mclaren/regular.ttf", 32, "#4D4D4D", (85, 50))
 
@@ -78,6 +79,7 @@ class Initial(BaseScreen):
         mixer.addEffect("started")
         status.createGame()
         status.getLastGame().addNewSession().startSession()
+        window.storeScreen("main_menu", self)
         window.defineScreen(StartMatch, status.getLastGame().sessions[0])
 
 initial = Initial()

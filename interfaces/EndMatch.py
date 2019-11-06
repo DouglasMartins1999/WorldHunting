@@ -53,8 +53,9 @@ class EndMatch(BaseScreen):
             window.defineScreen(self.match_screen, self.session.game.getCurrentLevel())
         else:
             game = self.session.game
-            player = len(game.session)
+            player = len(game.sessions)
             
-            game.setPlayer("Player" + str(player))
+            game.setPlayer("Player " + str(player))
             ranking.addPlayer(game.player, game.getGeralScore())
             ranking.sortRanking()
+            window.restorePrevScreen("main_menu")

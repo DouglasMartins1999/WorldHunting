@@ -29,6 +29,10 @@ class Listener:
         self.actions = []
         return actions
 
+    def replaceAllListeners(self, listeners):
+        self.actions = listeners
+        return self
+
     def callListeners(self, evt = (0, 0)):
         for action in self.actions:
             if(action.rect.collidepoint(evt)):
