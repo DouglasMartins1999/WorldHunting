@@ -12,7 +12,7 @@ import sys
 class Match(BaseScreen):
     def __init__(self, level_session):
         super().__init__(backgrounds[level_session.country["name"]])
-        self.session = level_session
+        self.session = level_session.startSession()
         self.color = level_colors[self.session.level]
         self.revealed_words = []
         self.typing_words = []
