@@ -30,24 +30,35 @@ class Mixer:
         self.songs[title] = song
         return song
 
-    def addBackground(self, song, auto_play = False, loops = 0, volume = 1.0):
-        if not song: return
-        return self.__addSound(song, backgrounds[song], auto_play, loops, volume)
+    def addBackground(self, title, auto_play = False, loops = 0, volume = 1.0):
+        pygame.mixer.music.load(default.song_root + backgrounds[title])
+        pygame.mixer.music.set_volume(volume)
+        
+        if auto_play: 
+            pygame.mixer.music.play(loops = loops)
+        
+        return self
     
-    def addEffect(self, song, auto_play = False, loops = 0, volume = 1.0):
-        if not song: return
-        return self.__addSound(song, effects[song], auto_play, loops, volume)
+    def addEffect(self, title, auto_play = False, loops = 0, volume = 1.0):
+        song = pygame.mixer.Sound(default.song_root + backgrounds[title])
+        song.set_volume(volume)
+        
+        if auto_play: 
+            song.play(loops = loops)
+
+        self.songs[title] = song
+        return song
 
 mixer = Mixer()
 
 backgrounds = {
-    "Brasil": "background/brazil.m4a",
-    "França": "background/france.mp3",
-    "China": "background/china.mp3",
-    "Austrália": "background/australia.mp3",
-    "África do Sul": "background/south_africa.mp3",
+    "Brasil": "background/brazil.ogg",
+    "França": "background/france.ogg",
+    "China": "background/china.ogg",
+    "Austrália": "background/australia.ogg",
+    "África do Sul": "background/south_africa.ogg",
 
-    "menu": "background/menu.mp3"
+    "menu": "background/menu.ogg"
 }
 
 effects = {

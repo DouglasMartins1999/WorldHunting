@@ -126,3 +126,6 @@ dmypy.json
 
 # testing files
 test.py
+
+# Audio files
+*.ogg

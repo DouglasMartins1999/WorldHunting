@@ -13,7 +13,8 @@ class Initial(BaseScreen):
     def __init__(self):
         super().__init__(backgrounds["main-screen"])
         self.renderButtons()
-        mixer.addEffect("winner", True)
+        # mixer.addEffect("winner", True)
+        mixer.addBackground("menu", True)
 
     def renderButtons(self):
         start = buttons["start_match"].copy()
