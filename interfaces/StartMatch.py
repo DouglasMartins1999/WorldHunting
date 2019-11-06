@@ -27,4 +27,4 @@ class StartMatch(BaseScreen):
         
     def startMatch(self, act):
         self.session.startSession()
-        window.defineScreen(Dialog, self.session)
+        window.defineScreen(Dialog, Match, self.session)

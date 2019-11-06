@@ -5,6 +5,7 @@ class Default:
         self.words_by_level = 3
         self.image_root = "assets/images/"
         self.font_root = "assets/fonts/"
+        self.song_root = "assets/songs/"
 
 default = Default()
 

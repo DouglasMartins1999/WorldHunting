@@ -38,6 +38,7 @@ backgrounds = {
     "main-screen": load("backgrounds/main_screen.png"),
     "dialogs": load("backgrounds/dialog_screen.png"),
     "blurred": load("backgrounds/blurred_bg.png"),
+    "dialogs": load("backgrounds/dialog_screen.png"),
 
     "Brasil": load("backgrounds/countries/brazil.png"),
     "França": load("backgrounds/countries/france.png"),
