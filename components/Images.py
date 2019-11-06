@@ -37,9 +37,13 @@ icons = {
 backgrounds = {
     "main-screen": load("backgrounds/main_screen.png"),
     "dialogs": load("backgrounds/dialog_screen.png"),
+    "blurred": load("backgrounds/blurred_bg.png"),
 
+    "Brasil": load("backgrounds/countries/brazil.png"),
     "França": load("backgrounds/countries/france.png"),
-    "China": load("backgrounds/countries/china.png")
+    "China": load("backgrounds/countries/china.png"),
+    "Austrália": load("backgrounds/countries/australia.png"),
+    "África do Sul": load("backgrounds/countries/south_africa.png"),
 }
 
 buttons = {
@@ -60,4 +64,17 @@ modals = {
     "choose-levels": load("modals/choose_level.png"),
     "how_play": load("modals/how_play.png"),
     "ranking": load("modals/ranking.png")
+}
+
+badges = [
+    load("badges/1_beginner.png"),
+    load("badges/2_normal.png"),
+    load("badges/3_advanced.png"),
+    load("badges/4_profissional.png"),
+    load("badges/5_master.png")
+]
+
+extras = {
+    "winner": load("badges/winner.png"),
+    "points": load("badges/points.png")
 }

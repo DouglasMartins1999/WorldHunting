@@ -5,7 +5,7 @@ from components.Color import level_colors
 from components.Images import backgrounds, icons
 
 class Dialog(BaseScreen):
-    def __init__(self):
+    def __init__(self, session):
         super().__init__(backgrounds["dialogs"])
         self.phrases = [
             "Olá!! Meu nome é Josh! Acabei de chegar de várias viagens que fiz a todos os continentes! Conheci o Brasil, a França, a Austrália, a África, e até mesmo a China.",

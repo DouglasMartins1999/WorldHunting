@@ -19,7 +19,7 @@ class LevelSession:
         return self
 
     def finishSession(self, date = None):
-        self.finish = dae or datetime.now()
+        self.finish = date or datetime.now()
         return self
 
     def getScore(self):
@@ -34,7 +34,7 @@ class GameSession:
         self.player = ""
         self.sessions = []
         self.countries = []
-        self.level = 1
+        self.level = 0
 
     def increaseLevel(self):
         self.level += 1
@@ -60,3 +60,6 @@ class GameSession:
         for session in self.sessions:
             score += session.score
         return score
+
+    def getCurrentLevel(self):
+        return self.sessions[self.level - 1]
