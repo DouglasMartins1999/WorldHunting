@@ -90,24 +90,24 @@ countries.append({
         "medium": [
             ["Joanesburgo", "A maior cidade"],
             ["Cidade do Cabo", "Dentre suas capitais estão: _______, Pretória e Bloemfontein"],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
+            ["Capoeira", "Cultura brasileira herdada dos africanos."],
+            ["Atlantico", "Oceano que separa o continente americano do continente africano."],
+            ["Africano", "Continente"],
+            ["futebol", "Principais esportes do país: Rugby, Crinquete, Surf e _____"],
             ["Segregacao", "Mesmo após o fim do regime apartheid, a _________ racial ainda é visível neste país"],
             ["Casamentos", "Durante o apartheid, uma das leis era: proibição de ___________ entre brancos e negros"]
         ], 
         "hard": [
-            ["Mão inglesa", "Regime de trânsito vigente no País, em que se trafega na mão esquerda"],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
+            ["Mao inglesa", "Regime de trânsito vigente no País, em que se trafega na mão esquerda"],
+            ["Economica", "País considerado a maior força _______ do continente africano."],
+            ["Desertificacao", "Fenômeno que ocorre devido ao mau uso do solo e que vem aumentando áreas de desertos na África."],
+            ["Nilo", "Principal rio africano"],
+            ["República", "Nome completo da África do Sul:  ______ da África do Sul"],
             ["Brasil", "O clima do país é semelhante ao clima do sul do _____"],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""]
+            ["Secas", "São um grande problema para a agricultura no sul da África"],
+            ["Lenha", "A fonte de energia mais consumida na África para fins domésticos e manufatureiros"],
+            ["Copa", "Décima nona edição da ____ do mundo, ocorreu de 11 de junho até 11 de julho, sedido neste país."],
+            ["Nobel", "A literatura do país conta com vários escritores renomeados, onde alguns deles já receberam homenagens do Prêmio _____ de Literatura"]
         ]
     } 
 })
