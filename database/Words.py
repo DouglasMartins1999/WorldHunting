@@ -119,32 +119,32 @@ countries.append({
         "easy": [
             ["Indico", "A Austrália é um país continental cercado pelos oceanos ______ e Pacífico"],
             ["Sydney", " O país é conhecido pela ______ Opera House"],
-            ["Outback", "O país é conhecido pelo vasto deserto interior chamado _______"],
-            ["Canguru", "_______ é uma espécie endêmica da Austrália"],
-            ["Melbourne", "_______ capital do estado de Victoria, é segunda cidade mais populosa do país"],
-            ["Quente", "A Australia é super popular entre os brasucas justamente pelo clima _____"]
+            ["Outback", "Deserto interior e rede de restaurante norte-americano"],
+            ["Canguru", "_______ animal popular da Austrália"],
+            ["Melbourne", "Segunda cidade mais populosa do país"],
+            ["Quente", "Clima do país"]
         ],
         "medium": [
-            ["Colonizacao", "A ______ da Austrália começou com o objetivo de esvaziar as cadeias superlotadas da Inglaterra"],
-            ["Melbourne", "______ é uma das melhores cidades do mundo para se viver"],
-            ["Policia", " A primeira ______ local foi formada por prisioneiros"],
+            #["Colonizacao", "A ______ da Austrália começou com o objetivo de esvaziar as cadeias superlotadas da Inglaterra"],
+            ["Desenvolvimento", "A Austrália é reconhecida por seu _______ econômico e qualidade de vida "],
+            #["Policia", " A primeira ______ local foi formada por prisioneiros"],
             ["Feminino", "A Austrália foi a primeira nação independente a permitir o voto _______"],
-            ["Colonia", "A Austrália deixou de ser ______ em 1901"],
-            ["Capital", "Há uma lenda de que Sydney e Melbourne disputavam o posto de _____ do país"],
-            ["Esculturas", "A Austrália conta com cerca de 150 ______ gigantes com diferentes motivos: frutas, animais, bebidas, etc."],
-            ["Polimero", "Em 1988, o governo alterou a fabricação do dinheiro local trocando o papel por uma espécie de _______ que tem uma vida útil muito maior"],
+            ["Colonia", "A Austrália deixou de ser ______ inglesa em 1901"],
+            ["Futebol", "A cultura do país também é destacada no _____ australiano - que exige muito condicionamento físico dos atletas"],
+            #["Esculturas", "A Austrália conta com cerca de 150 ______ gigantes com diferentes motivos: frutas, animais, bebidas, etc."],
+            ["Turismo", "Devido ao grande número de estudantes, o país é destaque no _______"],
         ],
         "hard": [
-            ["Aumentar", "Existe um grande incentivo do governo para ______ a população local"],
-            ["Gastronomia", "A capital mundial da ______ fica na Austrália"],
-            ["Perth", "______ é a cidade mais isolada do mundo"],
-            ["Gratuito", "Tem transporte público ______"],
-            ["Sydney", "_____ não é a capital da Austrália"],
-            ["Igualdade", " segundo país do mundo que olhou de forma crítica para a ________ de gênero "],
+            ["Aumentar", "Devido a baixa taxa de fecundidade no país, existe um grande incentivo do governo para ______ a população local"],
+            ["", ""],
+            ["", ""],
+            ["Gratuito", "Há transportes no país que são muito eficientes, limpos e  ______"],
+            ["Camberra", "Capital da Austrália"],
+            ["Igualdade", "Segundo país do mundo que olhou de forma crítica para a ________ de gênero "],
             ["Estudantes", "Terceiro país mais procurado por ________ estrangeiros"],
-            ["Restrito", "O consumo de bebidas alcoólicas na Austrália é muito ______"],
-            ["Economia", "A Segunda Guerra Mundial contribuiu para grandes mudanças na _______ do país"],
-            ["Cosmopolita", "Os efeitos da Segunda Guerra contribuíram para o desenvolvimento de uma sociedade mais diversificada e _________"]
+            ["Restrito", "Por conta do grande consumo de bebida alcoólica, seu consumo é muito ______ neste país"],
+            ["Economia", "A Segunda Guerra Mundial contribuiu para grandes mudanças na _______ do país, o que resultou em sua melhoria financeira mais tarde"],
+            ["", ""]
         ]
     }
 })
