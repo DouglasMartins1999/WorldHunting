@@ -90,24 +90,24 @@ countries.append({
         "medium": [
             ["Joanesburgo", "A maior cidade"],
             ["Cidade do Cabo", "Dentre suas capitais estão: _______, Pretória e Bloemfontein"],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
+            ["Capoeira", "Cultura brasileira herdada dos africanos."],
+            ["Atlantico", "Oceano que separa o continente americano do continente africano."],
+            ["Africano", "Continente"],
+            ["futebol", "Principais esportes do país: Rugby, Crinquete, Surf e _____"],
             ["Segregacao", "Mesmo após o fim do regime apartheid, a _________ racial ainda é visível neste país"],
             ["Casamentos", "Durante o apartheid, uma das leis era: proibição de ___________ entre brancos e negros"]
         ], 
         "hard": [
-            ["Mão inglesa", "Regime de trânsito vigente no País, em que se trafega na mão esquerda"],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""],
+            ["Mao inglesa", "Regime de trânsito vigente no País, em que se trafega na mão esquerda"],
+            ["Economica", "País considerado a maior força _______ do continente africano."],
+            ["Desertificacao", "Fenômeno que ocorre devido ao mau uso do solo e que vem aumentando áreas de desertos na África."],
+            ["Nilo", "Principal rio africano"],
+            ["República", "Nome completo da África do Sul:  ______ da África do Sul"],
             ["Brasil", "O clima do país é semelhante ao clima do sul do _____"],
-            ["", ""],
-            ["", ""],
-            ["", ""],
-            ["", ""]
+            ["Secas", "São um grande problema para a agricultura no sul da África"],
+            ["Lenha", "A fonte de energia mais consumida na África para fins domésticos e manufatureiros"],
+            ["Copa", "Décima nona edição da ____ do mundo, ocorreu de 11 de junho até 11 de julho, sedido neste país."],
+            ["Nobel", "A literatura do país conta com vários escritores renomeados, onde alguns deles já receberam homenagens do Prêmio _____ de Literatura"]
         ]
     } 
 })
@@ -125,26 +125,26 @@ countries.append({
             ["Quente", "Clima do país"]
         ],
         "medium": [
-            #["Colonizacao", "A ______ da Austrália começou com o objetivo de esvaziar as cadeias superlotadas da Inglaterra"],
+            ["Ingles", "Idioma do país"],
             ["Desenvolvimento", "A Austrália é reconhecida por seu _______ econômico e qualidade de vida "],
-            #["Policia", " A primeira ______ local foi formada por prisioneiros"],
+            ["Alto", "O país possui ____ IDH"],
             ["Feminino", "A Austrália foi a primeira nação independente a permitir o voto _______"],
             ["Colonia", "A Austrália deixou de ser ______ inglesa em 1901"],
             ["Futebol", "A cultura do país também é destacada no _____ australiano - que exige muito condicionamento físico dos atletas"],
-            #["Esculturas", "A Austrália conta com cerca de 150 ______ gigantes com diferentes motivos: frutas, animais, bebidas, etc."],
+            ["Sudeste", "A Nova Zelândia localiza-se a _______ da Austrália"],
             ["Turismo", "Devido ao grande número de estudantes, o país é destaque no _______"],
         ],
         "hard": [
             ["Aumentar", "Devido a baixa taxa de fecundidade no país, existe um grande incentivo do governo para ______ a população local"],
-            ["", ""],
-            ["", ""],
+            ["Ouro", "A Austrália exporta carne, trigo, lã e minérios  como bauxita, chumbo, níquel, manganês, _______ e prata"],
+            ["Capricornio", "A Austrália é cortada pelo Trópico de _______."],
             ["Gratuito", "Há transportes no país que são muito eficientes, limpos e  ______"],
             ["Camberra", "Capital da Austrália"],
             ["Igualdade", "Segundo país do mundo que olhou de forma crítica para a ________ de gênero "],
             ["Estudantes", "Terceiro país mais procurado por ________ estrangeiros"],
             ["Restrito", "Por conta do grande consumo de bebida alcoólica, seu consumo é muito ______ neste país"],
             ["Economia", "A Segunda Guerra Mundial contribuiu para grandes mudanças na _______ do país, o que resultou em sua melhoria financeira mais tarde"],
-            ["", ""]
+            ["Coala", "Espécie da fauna australiana, que habita no alto dos eucaliptos e se alimenta de suas folhas"]
         ]
     }
 })
