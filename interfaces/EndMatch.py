@@ -1,23 +1,29 @@
+from services.Events import status
+from services.Ranking import ranking
 from interfaces.BaseScreen import BaseScreen, window
 from components.Images import backgrounds, buttons, extras
 from components.Fonts import text
+from components.Song import mixer
 from settings.environment import level_names
 
 class EndMatch(BaseScreen):
-    def __init__(self, session, MatchClass):
+    def __init__(self, session, StartScreen):
         super().__init__(backgrounds["blurred"])
         self.session = session
-        self.match_screen = MatchClass
+        self.match_screen = StartScreen
         self.basicElements()
+        mixer.music.stop(400)
+        mixer.addEffect("winner")
 
     def basicElements(self):
+        time = self.session.getTime()
         start_btn = buttons["start_match"].copy()
         start_label = text("Próxima Fase", "asap/regular.ttf", 18, "#FFFFFF", (120, 25))
         start_btn.blit(start_label, (53, 12))
 
         basic_text = "Você conseguiu concluir o nível {} em {}:{} min. Sua pontuação nessa fase foi de {} pontos, e você tem {} pontos acumulados. Continue assim.".format(
             level_names[self.session.level],
-            str(5), str(40),
+            str(time[0]), str(time[1]),
             str(self.session.score),
             str(self.session.game.getGeralScore())
         )
@@ -40,5 +46,16 @@ class EndMatch(BaseScreen):
         self.mounted_screen = self.base_screen.copy()
 
     def startNextLevel(self, act):
-        self.session.game.addNewSession()
-        window.defineScreen(self.match_screen, self.session.game.getCurrentLevel())
+        mixer.addEffect("started")
+
+        if self.session.game.checkNewSessionPossibility():
+            self.session.game.addNewSession()
+            window.defineScreen(self.match_screen, self.session.game.getCurrentLevel())
+        else:
+            game = self.session.game
+            player = len(game.sessions)
+            
+            game.setPlayer("Player " + str(player))
+            ranking.addPlayer(game.player, game.getGeralScore())
+            ranking.sortRanking()
+            window.restorePrevScreen("main_menu")

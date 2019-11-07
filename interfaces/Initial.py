@@ -13,7 +13,7 @@ class Initial(BaseScreen):
     def __init__(self):
         super().__init__(backgrounds["main-screen"])
         self.renderButtons()
-        # mixer.addEffect("winner", True)
+        mixer.addBackground("menu", True)
 
     def renderButtons(self):
         start = buttons["start_match"].copy()
@@ -65,6 +65,7 @@ class Initial(BaseScreen):
         self.mounted_screen.blit(modals["ranking"], rect)
 
         for index, p in enumerate(ranking.players):
+            if index > 4: return
             name = text(p.player, "asap/medium.ttf", 28, colors[index], (220, 35))
             score = text(str(p.score), "mclaren/regular.ttf", 32, "#4D4D4D", (85, 50))
 
@@ -75,8 +76,10 @@ class Initial(BaseScreen):
             pos_score = (pos_score[0], pos_score[1] + 77)
 
     def startMatch(self, act):
+        mixer.addEffect("started")
         status.createGame()
-        status.session.addNewSession().startSession()
-        window.defineScreen(StartMatch, status.session.sessions[0])
+        status.getLastGame().addNewSession().startSession()
+        window.storeScreen("main_menu", self)
+        window.defineScreen(StartMatch, status.getLastGame().sessions[0])
 
 initial = Initial()

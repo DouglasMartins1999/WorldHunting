@@ -1,5 +1,6 @@
 from pygame import *
 from services.Session import GameSession
+from components.Song import mixer
 
 class Action:
     def __init__(self, rect, handler):
@@ -27,6 +28,10 @@ class Listener:
         actions = self.actions
         self.actions = []
         return actions
+
+    def replaceAllListeners(self, listeners):
+        self.actions = listeners
+        return self
 
     def callListeners(self, evt = (0, 0)):
         for action in self.actions:
@@ -92,6 +97,9 @@ class KeyHandler:
 
         if letter != None and len(self.letterSequence) < self.max_letters:
             self.letterSequence.append(letter)
+            mixer.addEffect("typing")
+        else:
+            mixer.addEffect("notallowed")
 
         if event == K_BACKSPACE and len(self.letterSequence) > 0:
             self.letterSequence.pop()
@@ -102,10 +110,14 @@ class KeyHandler:
 
 class StatusManager:
     def __init__(self):
-        self.session = None
+        self.session = []
 
     def createGame(self):
-        self.session = GameSession().getContries()
+        self.session.append(GameSession().getContries())
+
+    def getLastGame(self):
+        last = len(self.session) - 1
+        return self.session[last]
 
 events = Listener()
 keyboard = KeyHandler()

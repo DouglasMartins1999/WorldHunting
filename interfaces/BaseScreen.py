@@ -36,18 +36,26 @@ class Window:
         self.current_screen = screen.render
         return self
 
-    def storeScreen(self, screen, title):
+    def storeScreen(self, title, screen):
+        screen = StoredScreen(screen, events.actions)
         self.stored_screens[title] = screen
         return self
 
     def restorePrevScreen(self, title = None):
         try:
-            screen = self.stored_screens[title]
-            self.current_screen = screen.render
+            s = self.stored_screens[title]
+            self.current_screen = s.screen.render
+            events.replaceAllListeners(s.listeners)
+            return self
         except:
             return self
 
     def render(self):
         return self.current_screen()
+
+class StoredScreen:
+    def __init__(self, screen, listeners):
+        self.screen = screen
+        self.listeners = listeners
 
 window = Window()

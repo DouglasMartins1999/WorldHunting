@@ -3,6 +3,7 @@ from interfaces.BaseScreen import BaseScreen, window
 from components.Fonts import text
 from components.Color import level_colors
 from components.Images import backgrounds, icons
+from components.Song import mixer
 
 class Dialog(BaseScreen):
     def __init__(self, screen = None, *args):
@@ -27,6 +28,7 @@ class Dialog(BaseScreen):
         self.mounted_screen.blit(phrase_wrapper,  (posX, posY))
 
     def onClickNextPhrase(self, act):
+        mixer.addEffect("typing")
         if self.count < len(self.phrases) - 1: 
             self.count += 1
         elif self.next_screen != None:
