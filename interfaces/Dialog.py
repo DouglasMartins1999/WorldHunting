@@ -10,8 +10,8 @@ class Dialog(BaseScreen):
         super().__init__(backgrounds["dialogs"])
         self.phrases = [
             "Olá!! Meu nome é Josh! Acabei de chegar de várias viagens que fiz a todos os continentes! Conheci o Brasil, a França, a Austrália, a África, e até mesmo a China.",
-            "Texto 2",
-            "Texto 3",
+            "Trouxe na minha mala experiências, lembranças e conhecimentos que gostaria que fossem compartilhadas com você,",
+            "Por isso, hoje a sua missão é viajar para Países pelos quais passei e aprender um pouco mais sobre eles. :)",
         ]
         self.count = 0
         self.renderArrowDownButton()

@@ -36,6 +36,7 @@ icons = {
 
 backgrounds = {
     "main-screen": load("backgrounds/main_screen.png"),
+    "dialogs": load("backgrounds/dialog_screen.png"),
     "blurred": load("backgrounds/blurred_bg.png"),
     "dialogs": load("backgrounds/dialog_screen.png"),
 
