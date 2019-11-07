@@ -52,20 +52,20 @@ class Crossword:
 
     def breakIntoLetters(self):
         words = self.wordrange
-        words = list(map(lambda word: word[0], words))
-        words = list(map(lambda word: list(map(lambda letter: CrosswordLetter(letter, False), word)), words))
+        words = list(map(lambda word: [list(map(lambda letter: CrosswordLetter(letter, False), word[0])), word[1]] , words))
         return words
 
     def generateStructure(self):
-        words = self.words
+        words = self.words.copy()
         sequence = []
         last = None
+        shuffle(words)
 
         try:
             word = words.pop(0)
-            sequence.append(CrosswordWord(word, True, 0, 0))
+            sequence.append(CrosswordWord(word[0], True, 0, 0, word[1]))
 
-            while len(words) and last != word[0]:
+            while len(words) and last != words[0] and len(sequence) < (self.level * 3):
                 last = word = words.pop(0)
                 crossed = self.__getCrossed(word, sequence)
 
@@ -73,6 +73,13 @@ class Crossword:
                     sequence.append(crossed)
                 else:
                     words.append(word)
+
+            addX = min(sequence, key = lambda word: word.posX).posX * -1
+            addY = min(sequence, key = lambda word: word.posY).posY * -1
+
+            for seq in sequence:
+                seq.posX += addX
+                seq.posY += addY
 
         except IndexError:
             return
@@ -82,7 +89,7 @@ class Crossword:
     def __getCrossed(self, word, sequence):
         for mainword in sequence:
             for iM, lM in enumerate(mainword.word):
-                for iW, lW in enumerate(word):
+                for iW, lW in enumerate(word[0]):
                     # Possivel união
                     if lM.letter == lW.letter and not lM.isFilled and not lW.isFilled:
                         direction = not mainword.isVertical
@@ -96,17 +103,32 @@ class Crossword:
                             posX = mainword.posX + iM
                             posY = mainword.posY - iW
 
+                        if ((posX + len(word)) > 16 or (posY + len(word)) > 15):
+                            break
+
                         lW.isFilled = True
                         lM.isFilled = True
                         
-                        return CrosswordWord(word, direction, posX, posY)
+                        return CrosswordWord(word[0], direction, posX, posY, word[1])
 
         return None
+
+    def getSize(self, block_size = 32):
+        vertical = list(filter(lambda word: word.isVertical, self.structure))
+        horizontal = list(filter(lambda word: (not word.isVertical), self.structure))
+
+        max_width = max(horizontal, key=lambda word: word.posX + len(word.word))
+        max_height = max(vertical, key=lambda word: word.posY + len(word.word))
+
+        width = (max_width.posX + len(max_width.word)) * block_size
+        height = (max_height.posY + len(max_height.word)) * block_size
+
+        return (width, height)
                         
 
 class CrosswordLetter:
     def __init__(self, letter = "A", isFilled = False):
-        self.letter = letter
+        self.letter = letter.upper()
         self.isFilled = isFilled
 
     def toogleFill(self):
@@ -115,11 +137,12 @@ class CrosswordLetter:
 
 
 class CrosswordWord:
-    def __init__(self, word = [CrosswordLetter()], isVertical = True, posX = 0, posY = 0):
+    def __init__(self, word = [CrosswordLetter()], isVertical = True, posX = 0, posY = 0, hint = ""):
         self.word = word
         self.isVertical = isVertical
         self.posX = posX
         self.posY = posY
+        self.hint = hint
 
     def toWord(self):
         letters = list(map(lambda l: l.letter, self.word))

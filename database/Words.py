@@ -2,7 +2,6 @@ countries = []
 
 countries.append({
     "name": "França",
-    "background": "",
     "categories": {
         "easy": [
             ["Paris", "Capital francesa"],
@@ -31,23 +30,23 @@ countries.append({
             ["Luis XIV", "\"Rei Sol\", luxuoso, governou a França de 1643 a 1715"],
             ["Marseillaise", "La __________, hino nacional francês"],
             ["Bastilha", "A tomada da ________ representou o inicio da revolução"],
-            ["Gália", "Nome pela qual a região da frança era conhecida no império Romano"],
+            ["Galia", "Nome pela qual a região da frança era conhecida no império Romano"],
             ["Monet", "Popular pintor impressionista: Claude ______"],
             ["Rousseau", "Jean-Jacques ________, importante filósofo"]
         ]
     }
-},
-{
+})
+
+countries.append({
     "name": "China",
-    "background": "",
     "categories": {
         "easy": [
             ["Grande Muralha", "A China possui a maior construção do mundo, a _______ ________"],
             ["Ideografia", "Utiliza a ___________ para representar palavras e conceitos abstratos"],
-            ["Poluição", "Segundo país com mais _________ no mundo"],
+            ["Poluicao", "Segundo país com mais _________ no mundo"],
             ["Pequim","______, a enorme capital da China"],
             ["Suina", "A carne _______ é a mais consumida entre Chineses"],
-            ["Ásia", "A China é o maior país da _____ Oriental"],
+            ["Asia", "A China é o maior país da _____ Oriental"],
             ["Exercito", "O maior número de soldados do _______ encontra-se na China"]
         ],
         "medium": [
@@ -67,12 +66,128 @@ countries.append({
             ["Mukden", "Em 1931, os japoneses invadiram o território chinês, evento conhecido como Incidente ______"],
             ["Guerra Civil", "A ____ _____ entre comunistas e nacionalistas foi parcialmente interrompida em 1930"],
             ["Nacionalistas", "A China era ocupada por diferentes nações, como Inglaterra e França, o que motivou movimentos ________"],
-            ["BRICS", "o país é membro do grupo _____ de economias emergentes importantes"],
-            ["Reforma Econômica", "Com a ____ ______ chinesa, milhões de trabalhadores rurais do país se mudaram para as grandes cidades"],
-            ["Carcerária", "O país também tem a segunda maior população ______ do planeta (atrás apenas dos Estados Unidos)"],
-            ["Filho único", "Preocupada com seu crescimento populacional, tentou implementar uma política de planejamento familiar, chamada: política do ____ _____"]
+            ["BRICS", "O país é membro do grupo _____ de economias emergentes importantes"],
+            ["Reforma Economica", "Com a ____ ______ chinesa, milhões de trabalhadores rurais do país se mudaram para as grandes cidades"],
+            ["Carceraria", "O país também tem a segunda maior população ______ do planeta (atrás apenas dos Estados Unidos)"],
+            ["Filho unico", "Preocupada com seu crescimento populacional, tentou implementar uma política de planejamento familiar, chamada: política do ____ _____"]
         ]
     }
-},
+})
 
-)
+countries.append({
+    "name": "África do Sul",
+    "background": "",
+    "categories": {
+        "easy": [
+            ["Africano", "A África do Sul é um país situado na extremidade sul do continente _______"],
+            ["Nobel", "A África do Sul tem 10 prêmios _____"],
+            ["Sul", "A África do Sul é um país que fica localizado no extremo ___ do continente africano"],
+            ["Nelson Mandela", "Ganhador do Prêmio Nobel e ex-presidente"],
+            ["Apartheid", "Regime de segregação racial"],
+            ["Leis", "As ____ de trânsito são parecidas com as brasileiras"],
+            ["Inglês", "Idioma oficial"]
+        ], 
+        "medium": [
+            ["Joanesburgo", "A maior cidade"],
+            ["Cidade do Cabo", "Dentre suas capitais estão: _______, Pretória e Bloemfontein"],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["Segregacao", "Mesmo após o fim do regime apartheid, a _________ racial ainda é visível neste país"],
+            ["Casamentos", "Durante o apartheid, uma das leis era: proibição de ___________ entre brancos e negros"]
+        ], 
+        "hard": [
+            ["Mão inglesa", "Regime de trânsito vigente no País, em que se trafega na mão esquerda"],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["Brasil", "O clima do país é semelhante ao clima do sul do _____"],
+            ["", ""],
+            ["", ""],
+            ["", ""],
+            ["", ""]
+        ]
+    } 
+})
+
+countries.append({
+    "name": "Austrália",
+    "background":"",
+    "categories": {
+        "easy": [
+            ["Indico", "A Austrália é um país continental cercado pelos oceanos ______ e Pacífico"],
+            ["Sydney", " O país é conhecido pela ______ Opera House"],
+            ["Outback", "Deserto interior e rede de restaurante norte-americano"],
+            ["Canguru", "_______ animal popular da Austrália"],
+            ["Melbourne", "Segunda cidade mais populosa do país"],
+            ["Quente", "Clima do país"]
+        ],
+        "medium": [
+            #["Colonizacao", "A ______ da Austrália começou com o objetivo de esvaziar as cadeias superlotadas da Inglaterra"],
+            ["Desenvolvimento", "A Austrália é reconhecida por seu _______ econômico e qualidade de vida "],
+            #["Policia", " A primeira ______ local foi formada por prisioneiros"],
+            ["Feminino", "A Austrália foi a primeira nação independente a permitir o voto _______"],
+            ["Colonia", "A Austrália deixou de ser ______ inglesa em 1901"],
+            ["Futebol", "A cultura do país também é destacada no _____ australiano - que exige muito condicionamento físico dos atletas"],
+            #["Esculturas", "A Austrália conta com cerca de 150 ______ gigantes com diferentes motivos: frutas, animais, bebidas, etc."],
+            ["Turismo", "Devido ao grande número de estudantes, o país é destaque no _______"],
+        ],
+        "hard": [
+            ["Aumentar", "Devido a baixa taxa de fecundidade no país, existe um grande incentivo do governo para ______ a população local"],
+            ["", ""],
+            ["", ""],
+            ["Gratuito", "Há transportes no país que são muito eficientes, limpos e  ______"],
+            ["Camberra", "Capital da Austrália"],
+            ["Igualdade", "Segundo país do mundo que olhou de forma crítica para a ________ de gênero "],
+            ["Estudantes", "Terceiro país mais procurado por ________ estrangeiros"],
+            ["Restrito", "Por conta do grande consumo de bebida alcoólica, seu consumo é muito ______ neste país"],
+            ["Economia", "A Segunda Guerra Mundial contribuiu para grandes mudanças na _______ do país, o que resultou em sua melhoria financeira mais tarde"],
+            ["", ""]
+        ]
+    }
+})
+
+
+countries.append({
+    "name": "Brasil",
+    "categories": {
+        "easy": [
+            ["Cristo Redentor", "Uma das 7 maravilhas do mundo"],
+            ["Salvador", "Primeira capital do país"],
+            ["Independencia", "Comemorado em 7 de setembro"],
+            ["Paulista", "Gentílico de São Paulo e principal avenida do estado"],
+            ["Globo", "Maior conglomerado de mídia da américa latina"],
+            ["Pele", "Conhecido como \"O rei do futebol\""],
+            ["Isabel", "Princesa responsável pela abolição da escravidão"],
+            ["Atlantico", "Oceano que banha o Brasil"],
+        ],
+        "medium": [
+            ["Marechal Deodoro", "Primeiro Presidente"],
+            ["Manaus", "Local do maior polo industrial do país"],
+            ["Embraer", "Fabricante nacional de aviões"],
+            ["Feijoada", "Guisado de feijão muito popular"],
+            ["Pedro I", "Primeiro Rei do Brasil"],
+            ["Caatinga", "Bioma exclusivamente brasileiro, encontrado em boa parte do nordeste"],
+            ["Niemeyer", "Oscar _______, renomado arquiteto modernista"],
+            ["Ronaldinho", "Conhecido como \"O fenômeno\", futebolista que atuou como atacante"],
+            ["Rondonia", "Estado cuja capital é Porto Velho"],
+            ["Amazonas", "Estado que recebe o nome do maior rio do país"],
+            ["Japoneses", "O Brasil abriga a maior côlonia de _______ fora do seu país"],
+            ["Aparecida", "Padroeira do Brasil"],
+            ["Planalto", "Palácio do _______, sede do poder executivo"],
+            ["Bossa Nova", "Genero musical brasileiro, surgido ao fim dos anos 50"]
+        ],
+        "hard": [
+            ["ANTT", "Uma das agências reguladoras de transportes"],
+            ["Machado de Assis", "Fundador da Academia Brasileira de Letras"],
+            ["Portinari", "Pintor Brasileiro, autor de \"O Lavrador de Café\""],
+            ["Guanabara", "Estado estinto em 1975, abrigava o antigo Distrito Federal"],
+            ["Castelo Branco", "Primeiro presidente do regime militar brasileiro"],
+            ["Paraguai", "Pais cujo Brasil, Argentina e Uruguai declaram guerra em 1864"],
+            ["Tiradentes", "Mártir brasileiro, atuante na Inconfidência Mineira. Possui um feriado em sua homenagem."],
+            ["Chui", "Cidade mais ao sul (meridional) do país"],
+        ]
+    }
+})
