@@ -1,6 +1,6 @@
 import pygame
 from settings.environment import default
-
+ 
 class Effect:
     def __init__(self, sound):
         self.sound = sound

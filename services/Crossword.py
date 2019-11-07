@@ -91,7 +91,12 @@ class Crossword:
             for iM, lM in enumerate(mainword.word):
                 for iW, lW in enumerate(word[0]):
                     # Possivel união
+                    fillStatus = list(map(lambda w: w.isFilled, mainword.word))
+                    filleds = list(filter(lambda w: w, fillStatus))
+
                     if lM.letter == lW.letter and not lM.isFilled and not lW.isFilled:
+                        if len(mainword.word) - 1 < len(filleds): continue
+
                         direction = not mainword.isVertical
                         posX = 0
                         posY = 0

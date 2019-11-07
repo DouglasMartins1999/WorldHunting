@@ -8,7 +8,7 @@ from services.Session import LevelSession
 from services.Events import keyboard, events
 from settings.environment import level_names
 import sys
-
+ 
 class Match(BaseScreen):
     def __init__(self, level_session, start_screen):
         super().__init__(backgrounds[level_session.country["name"]])
